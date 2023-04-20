@@ -46,10 +46,5 @@ public class Book implements Cloneable {
                 ", author=" + author +
                 '}';
     }
-    @Override
-    protected Book clone() throws CloneNotSupportedException {
-        Book newBook = (Book) super.clone();
-        newBook.author = (Author) author.clone();
-        return newBook;
-    }
+
 }

@@ -27,13 +27,13 @@ public enum WeekDays {
     public boolean isWorkDay()
     {
         // возвращать true если день с понедельника по пятницу включительно
-        return true;
+        return !isWeekEnd();
     }
 
     public boolean isWeekEnd()
     {
         // возвращать true если день суббота или воскресенье
-        return true;
+        return ordinal() == 5 || ordinal() == 6;
     }
 
 
