@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="First commit">
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="End of lesson 6 commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/HomeWork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayListTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/champagne/Cru.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/champagne/Cru.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/date/MyDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/date/MyDate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/weekdays/WeekDays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/weekdays/WeekDays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/cloning/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/cloning/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/cloning/CloneTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681816276146</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="End of lesson 6 commit">
+      <created>1682020662200</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682020662200</updated>
+    </task>
+    <task id="LOCAL-00003" summary="End of lesson 6 commit">
+      <created>1682020677926</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682020677926</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +104,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="End of lesson 6 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="End of lesson 6 commit" />
   </component>
 </project>
