@@ -1,6 +1,29 @@
 package lesson6.list;
 
-public class MyArrayList implements MyList{
+import java.util.Iterator;
+
+public class MyArrayList implements MyList, Iterable<Integer>{
+    @Override
+    public Iterator<Integer> iterator() {
+        //реализация итератора через анонимный внутренний класс
+        return new Iterator<Integer>() {
+            //позиция по умолчанию
+            private int position = -1;
+            @Override
+            public boolean hasNext() {
+                return ++position < size;
+            }
+
+            @Override
+            public Integer next() {
+                return get(position);
+            }
+            @Override
+            public void remove() {
+                MyArrayList.this.remove(position--);
+            }
+        };
+    }
 
     private  static final int INITIAL_SIZE = 4; // Начальная емкость контейнера
     private int size = 0; // Длина контейнера
