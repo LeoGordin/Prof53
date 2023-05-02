@@ -29,97 +29,122 @@ public class MyDoubleLinkedList implements MyList {
         }
     }
 
+    private Node getNodeByIndex(int index) {
+        if(index < 0 || index >= size)
+            throw new IndexOutOfBoundsException();
+        Node n = head;
+        while (n != null && index > 0)
+        {
+            index--;
+            n = n.next;
+        }
+        return n;
+    }
+
     @Override
     public boolean contains(int value) {
-        if (size == 0) {
-            throw new NoSuchElementException();
+        Node n = head;
+        while (n != null)
+        {
+            if(n.value == value)
+                return true;
+            n = n.next;
         }
-
-        Node current = head;
-        while(current != null && current.value != value) {
-            current = current.next;
-        }
-
-        if (current == null) {
-            return false;
-        }
-
-        return true;
+        return false;
     }
 
 
 
     @Override
     public void set(int index, int value) {
-        remove(index);
-        add(index, value);
+    Node n = getNodeByIndex(index);
+    if (n != null)
+        n.value = value;
     }
 
 
 
     @Override
     public void add(int value) {
-        Node n = new Node(value);
-        if (head == null)
+        Node node;
+        // нет ни одного элемента
+        if(size() == 0)
         {
-            head = tail = new Node(value);
-            head.prev = null;
-            tail.next = null;
+            node = new Node(value);
+            head = node;
         }
         else {
-            tail.next = new Node(value);
-            n.prev = tail;
-            tail = n;
-            tail.next = null;
+            node = new Node(null, tail, value);
         }
+        tail = node;
+        size++;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder b = new StringBuilder("[");
+        Node n = head;
+        while (n != null)
+        {
+            b.append(n.value);
+            if(n.next != null)
+                b.append(", ");
+            n = n.next;
+        }
+        b.append("]");
+        return b.toString();
     }
 
     @Override
     public void add(int index, int value) {
-    if (index >=0 && index <= size) {
-        Node n = new Node(value);
-        Node current = head;
+        if (size() == 0 && index == 0) {
+            add(value);
+            return;
+        }
         if (index == 0) {
-            addFirst(value);
-        } else if (index == size) {
-            addLast(value);
-        } else {
-            for (int i = 0; i < index && current.next != null; i++) {
-                current = current.next;
-            }
-            n.next = current;
-            current.prev.next = n;
-            n.prev = current.prev;
-            current.prev = n;
+            Node n = new Node(head, null, value);
+            head = n;
             size++;
         }
-    }else {
-        throw new IndexOutOfBoundsException();
-    }
-
-
+        else if (index == size()) {
+            Node n = new Node(null, tail, value);
+            tail = n;
+            size++;
+        }
+        else {
+            Node n = getNodeByIndex(index);
+            Node p = n.prev;
+            Node newNode = new Node(n, p, value);
+            size++;
+        }
     }
 
     @Override
     public void remove(int index) {
-        if (index+1 >= 0 && index+1 <= size) {
-            Node node = head;
-
-            if (index == 0) {
-                removeFirst();
-            } else if (index == size - 1) {
-                removeLast();
-            } else {
-                for (int i = 0; i < index && node.next != null; i++){
-                    node = node.next;
-                }
-                node.prev.next = node.next;
-                node.next.prev = node.prev;
-                size--;
-            }
-        } else {
-            throw new IndexOutOfBoundsException();
+        if(index < 0 || index >= size())
+            throw  new IndexOutOfBoundsException();
+        if(index == 0 && head != null)
+        {
+            head = head.next;
+            if(head != null)
+                head.prev = null;
         }
+        else if (index == size() - 1)
+        {
+            tail = tail.prev;
+            if(tail != null)
+                tail.next = null;
+        }
+        else {
+            Node c = getNodeByIndex(index);
+            Node p = c.prev;
+            Node n = c.next;
+            if(p != null)
+                p.next = n;
+            if(n != null)
+                n.prev = p;
+        }
+        size--;
     }
 
     public int getFirst() {
@@ -130,34 +155,12 @@ public class MyDoubleLinkedList implements MyList {
         return get(size-1);
     }
 
-    public int removeFirst() {
-        if (head == null) {
-            return 0;
-        }
-        Node n = head;
-        if (head.next == null) {
-            tail = null;
-        } else {
-            head.next.prev = null;
-        }
-        head = head.next;
-        size--;
-        return size;
+    public void removeFirst() {
+        remove(0);
     }
 
-    public int removeLast() {
-        if (tail == null) {
-            return 0;
-        }
-        Node n = tail;
-        if (head.next == null) {
-            head = null;
-        } else {
-            tail.prev.next = null;
-        }
-        tail = tail.prev;
-        size--;
-        return size;
+    public void removeLast() {
+        remove(size-1);
     }
 
     public void addFirst(int value) {
@@ -184,7 +187,7 @@ public class MyDoubleLinkedList implements MyList {
         size++;
     }
 
-public static class Node {
+private static class Node {
     Node prev;
     Node next;
     int value;

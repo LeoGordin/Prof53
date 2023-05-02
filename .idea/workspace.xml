@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="lesson 7 coffee break commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson7/ForEachTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson7/HomeWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson7/IteratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson7/Practice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson8/MyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson8/MyLinkedListTester.java" afterDir="false" />
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="DLL Homework">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson8/homework/MyDoubleLinkedListTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayListTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayListTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson8/homework/MyDoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson8/homework/MyDoubleLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682447503150</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="DLL Homework">
+      <created>1682939585825</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682939585825</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,7 +130,8 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="End of lesson 6 commit" />
     <MESSAGE value="lesson 7 coffee break commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson 7 coffee break commit" />
+    <MESSAGE value="DLL Homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="DLL Homework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

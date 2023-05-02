@@ -1,8 +1,56 @@
 package lesson6.list;
 
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class MyArrayList implements MyList, Iterable<Integer>{
+
+    public Iterator<Integer> smallToBigIterator() {
+        return new smallToBigIterator();
+        };
+    public class smallToBigIterator implements Iterator<Integer> {
+
+        private int[] source = new int[size];
+        private int position = -1;
+
+        public smallToBigIterator() {
+            System.arraycopy(data, 0, source,0, size);
+            Arrays.sort(source);
+        }
+
+
+        @Override
+        public boolean hasNext() {
+            return ++position < size;
+        }
+
+        @Override
+        public Integer next() {
+            if (position < 0 || position <= size)
+                throw new NoSuchElementException();
+
+            return source[position];
+        }
+    }
+
+    public Iterator<Integer> backwardIterator() {
+
+        return new  Iterator<Integer>() {
+
+            private int position = size;
+            @Override
+            public boolean hasNext() {
+                return --position >= 0;
+            }
+
+            @Override
+            public Integer next() {
+                return get(position);
+            }
+        };
+    }
+
     @Override
     public Iterator<Integer> iterator() {
         //реализация итератора через анонимный внутренний класс
