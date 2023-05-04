@@ -37,8 +37,9 @@ public class IteratorTest {
         {
             int value = arrayIterator.next();
             System.out.println(value);
-            if (value > 25);
+            if (value > 25) {
                 arrayIterator.remove();
+            }
         }
 
         // для того чтобы foreach работал
