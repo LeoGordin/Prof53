@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 9 homework commit">
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 10 code addition">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson10/homework/Concordance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson10/homework/Element.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +124,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683189981751</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Lesson 10 code addition">
+      <created>1683455548714</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683455548714</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Lesson 10 code addition">
+      <created>1683455569100</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683455569100</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,7 +146,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -143,7 +171,8 @@
     <MESSAGE value="DLL Homework" />
     <MESSAGE value="DLL Homework Check commit" />
     <MESSAGE value="Lesson 9 homework commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 9 homework commit" />
+    <MESSAGE value="Lesson 10 code addition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 10 code addition" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
