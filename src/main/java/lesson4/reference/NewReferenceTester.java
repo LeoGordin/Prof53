@@ -9,7 +9,7 @@ public class NewReferenceTester {
 
     }
 
-    public static void change (int array []){
+    public static void change (int[] array){
 
         array = new int[10];
         array[0] = 1000;

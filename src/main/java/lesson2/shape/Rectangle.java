@@ -2,8 +2,8 @@ package lesson2.shape;
 
 public class Rectangle extends Figure{
 
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     public Rectangle(int x, int y) {
         this.x = x;

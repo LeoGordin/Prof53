@@ -9,7 +9,7 @@ public class Boxing {
 
 
         int i = 10;
-        Integer i1 = new Integer(10);
+        Integer i1 = Integer.valueOf(10);
 
         Integer i2 = 10; //boxing
         if(i2 < 100)//unboxing
@@ -21,8 +21,8 @@ public class Boxing {
 
         System.out.println(a == b);
 
-        Integer i3 = new Integer(10);
-        Integer i4 = new Integer(10);
+        Integer i3 = Integer.valueOf(10);
+        Integer i4 = Integer.valueOf(10);
         System.out.println(i3 == i4);
         // == сравнивает ссылочные типы по адресу в памяти
 

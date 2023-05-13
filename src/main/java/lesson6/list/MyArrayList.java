@@ -8,10 +8,11 @@ public class MyArrayList implements MyList, Iterable<Integer>{
 
     public Iterator<Integer> smallToBigIterator() {
         return new smallToBigIterator();
-        };
+        }
+
     public class smallToBigIterator implements Iterator<Integer> {
 
-        private int[] source = new int[size];
+        private final int[] source = new int[size];
         private int position = -1;
 
         public smallToBigIterator() {
@@ -126,10 +127,7 @@ public class MyArrayList implements MyList, Iterable<Integer>{
 
     private void increaseCapacity() {
         int [] newData = new int[size*2];
-        for (int i =0; i < size; i++)
-        {
-            newData [i] = data [i];
-        }
+        if (size >= 0) System.arraycopy(data, 0, newData, 0, size);
         data = newData;
     }
     @Override

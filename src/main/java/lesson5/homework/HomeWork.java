@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class HomeWork {
     public static void main(String[] args) {
-        int a [][] = {
+        int[][] a = {
                 {1,2,3},
                 {4},
                 {-10}
@@ -22,11 +22,11 @@ public class HomeWork {
 
         removeDuplicates(c, d);
 
-        int r [] = {1, 2, 7, 12, 33,  35, 37, 50, 77};
+        int[] r = {1, 2, 7, 12, 33,  35, 37, 50, 77};
         System.out.println(Arrays.binarySearch(r, 50));
         System.out.println(Arrays.binarySearch(r, 10));
 
-        int l [] = {1, 2, 7, 12, 33,  35, 37, 50, 77};
+        int[] l = {1, 2, 7, 12, 33,  35, 37, 50, 77};
         // System.out.println(Arrays.binarySearch(r, 50)); // 7
         System.out.println(binarySearch(l, 50));
 
@@ -37,14 +37,8 @@ public class HomeWork {
     public static int [] removeDuplicates(int [] a, int [] b)
     {
         int [] c = new int[a.length + b.length];
-        for(int i = 0; i < a.length; i++)
-        {
-            c[i] = a[i];
-        }
-        for(int i = 0; i < b.length; i++)
-        {
-            c[i + a.length] = b[i];
-        }
+        System.arraycopy(a, 0, c, 0, a.length);
+        System.arraycopy(b, 0, c, 0 + a.length, b.length);
         Arrays.sort(c);
         int [] d = new int[c.length];
         int current = c[0];
@@ -59,10 +53,7 @@ public class HomeWork {
             current = c[i];
         }
         int [] e = new int[index];
-        for(int i = 0; i < e.length; i++)
-        {
-            e[i] = d[i];
-        }
+        System.arraycopy(d, 0, e, 0, e.length);
         return e;
     }
 

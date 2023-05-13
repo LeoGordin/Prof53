@@ -3,11 +3,11 @@ package lesson3.pizza;
 public class Pizza {
 
     //private static String size;
-    private PizzaSize size;
-    private int ham;
-    private int cheese;
-    private int pepperoni;
-    private int pineapple;
+    private final PizzaSize size;
+    private final int ham;
+    private final int cheese;
+    private final int pepperoni;
+    private final int pineapple;
 
     public Pizza(PizzaSize size, int ham, int cheese, int pepperoni, int pineapple) {
         this.size = size;

@@ -1,7 +1,7 @@
 package lesson2.shape;
 
 public class Circle extends Figure{
-    private double radius;
+    private final double radius;
     double area() {
         return Math.PI * radius * radius;
     }

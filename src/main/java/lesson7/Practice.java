@@ -31,5 +31,5 @@ public class Practice {
 }
 
 interface Filter {
-    public boolean filter (String s);
+    boolean filter (String s);
 }

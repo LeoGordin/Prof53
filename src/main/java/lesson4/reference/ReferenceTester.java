@@ -7,7 +7,7 @@ public class ReferenceTester {
         // примитивные типы данных начинаются на маленькую букву (int, double, byte, char, long, short, float, boolean)
         // Ссылочные типы данных начинаются на заглавную букву (String, Integer, Double etc)
 
-        int a[] = new int[1];
+        int[] a = new int[1];
         a[0] = 10;
         changeArray(a);
         System.out.println(a[0]);

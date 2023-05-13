@@ -51,11 +51,7 @@ public class LoanIssuer {
             return true;
 
         }
-        if (!isLazy && !isKind && taker.getYearlyIncome() > 28000 && taker.getAge() < 50) {
-            return true;
-        }
-
-        return false;
+        return !isLazy && !isKind && taker.getYearlyIncome() > 28000 && taker.getAge() < 50;
 
 
     }

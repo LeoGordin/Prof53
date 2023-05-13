@@ -2,9 +2,9 @@ package lesson2.shape;
 
 public class Triangle extends Figure{
 
-    private int x;
-    private int y;
-    private int z;
+    private final int x;
+    private final int y;
+    private final int z;
 
     public Triangle(int x, int y, int z) {
         this.x = x;

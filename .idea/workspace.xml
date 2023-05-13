@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 10 code addition">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson10/homework/Concordance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson10/homework/Element.java" afterDir="false" />
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 11 homework">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomArrayDeque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomDeque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomDequeTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/QueueTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/StackTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson12/Lesson12.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson10/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson10/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/bank/LoanIssuer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/bank/LoanIssuer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/shape/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/shape/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/shape/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/shape/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/shape/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/shape/Triangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/casino/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/casino/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/casino/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/casino/Dealer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/casino/Rank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/casino/Rank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/pizza/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/pizza/Pizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/animals/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/reference/Boxing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/reference/Boxing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/reference/NewReferenceTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/reference/NewReferenceTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/reference/ReferenceTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/reference/ReferenceTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/homework/HomeWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/homework/HomeWork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson7/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson7/Practice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683455569100</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Lesson 11 homework">
+      <created>1683654693419</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683654693421</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +202,8 @@
     <MESSAGE value="DLL Homework Check commit" />
     <MESSAGE value="Lesson 9 homework commit" />
     <MESSAGE value="Lesson 10 code addition" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 10 code addition" />
+    <MESSAGE value="Lesson 11 homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 11 homework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
