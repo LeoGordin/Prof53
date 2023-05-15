@@ -8,29 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 11 homework">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomArrayDeque.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomDeque.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomDequeTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/QueueTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson11/StackTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson12/Lesson12.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson12/HomeWork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson10/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson10/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/bank/LoanIssuer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/bank/LoanIssuer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/shape/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/shape/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/shape/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/shape/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/shape/Triangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/shape/Triangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/casino/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/casino/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/casino/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/casino/Dealer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/casino/Rank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/casino/Rank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/pizza/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/pizza/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/animals/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/reference/Boxing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/reference/Boxing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/reference/NewReferenceTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/reference/NewReferenceTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/reference/ReferenceTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/reference/ReferenceTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/homework/HomeWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/homework/HomeWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson7/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson7/Practice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson11/CustomArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomArrayDeque.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/Library/Java/JavaVirtualMachines/openjdk-20.0.1/Contents/Home/lib/src.zip!/java.base/java/util/ArrayList.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -168,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683654693421</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Lesson 11 homework">
+      <created>1683977676592</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683977676592</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,5 +204,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Prof53$HomeWork.ic" NAME="HomeWork Coverage Results" MODIFIED="1683979478832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>lesson12.*</FILTER>
+    </SUITE>
   </component>
 </project>

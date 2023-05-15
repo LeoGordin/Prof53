@@ -6,7 +6,6 @@ public class CustomArrayDeque implements CustomDeque {
     private int[] source = new int[INITIAL_CAPACITY]; // массив с элементами дека
     private int size = 0; // сколько элементов в нашем деке
     private int firstElementIndex = 0; // индекс первого элемента дека внутри массива
-    private int lastElementIndex = source.length -1;
 
     private static final int INITIAL_CAPACITY = 4;
 
@@ -76,23 +75,22 @@ public class CustomArrayDeque implements CustomDeque {
         if (size() == source.length)
             increaseCapacity();
         size++;
-        lastElementIndex++;
-        source[lastElementIndex] = value;
+        source[size-1] = value;
     }
 
     @Override
     public int getLast() {
-        return source[lastElementIndex];
+        return source[size-1];
     }
 
     @Override
     public int removeLast() {
         if (size == 0)
             throw new IndexOutOfBoundsException();
-        lastElementIndex = lastElementIndex -1;
+        source[size-1] = source[size-2];
         size--;
 
         // вернуть сохраненное значение
-        return source[lastElementIndex];
+        return source[size-1];
     }
 }
