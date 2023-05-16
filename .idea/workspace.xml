@@ -7,8 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 11 homework">
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 11 homework correction">
       <change afterPath="$PROJECT_DIR$/src/main/java/lesson12/HomeWork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/Lesson13.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/Mover.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/PlayerReverseAgeComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/PlayerTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson11/CustomArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomArrayDeque.java" afterDir="false" />
     </list>
@@ -158,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683977676592</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Lesson 11 homework correction">
+      <created>1684174667965</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684174667965</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,7 +205,8 @@
     <MESSAGE value="Lesson 9 homework commit" />
     <MESSAGE value="Lesson 10 code addition" />
     <MESSAGE value="Lesson 11 homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 11 homework" />
+    <MESSAGE value="Lesson 11 homework correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 11 homework correction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
