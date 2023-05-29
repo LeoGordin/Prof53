@@ -7,15 +7,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 11 homework correction">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson12/HomeWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/Lesson13.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/Mover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/PlayerReverseAgeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/PlayerTester.java" afterDir="false" />
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 13 commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/homework/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson13/homework/EmployeeTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/Lesson14.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/Professor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/University.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/retro/CurrencyExchange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/retro/FrankfurterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/retro/GsonTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson14/retro/Rate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson15/Lesson15.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson15/hashmap/MyHashMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson15/hashmap/MyHashMapTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson15/hashmap/MyMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson11/CustomArrayDeque.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson11/CustomArrayDeque.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684174667965</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Lesson 13 commit">
+      <created>1684266601108</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684266601109</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +222,8 @@
     <MESSAGE value="Lesson 10 code addition" />
     <MESSAGE value="Lesson 11 homework" />
     <MESSAGE value="Lesson 11 homework correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 11 homework correction" />
+    <MESSAGE value="Lesson 13 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 13 commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
