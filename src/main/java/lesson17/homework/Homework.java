@@ -22,6 +22,7 @@ public class Homework {
         List<String> reversedStrings = reverseStrings(transformedStrings);
         System.out.println(reversedStrings);
     }
+
     public static List<String> transformStrings(List<String> strings) {
         Function<String, String> transformFunction = str -> str.length() + "-" + str.toUpperCase();
         return mapStrings(strings, transformFunction);
@@ -33,8 +34,6 @@ public class Homework {
     }
 
     private static List<String> mapStrings(List<String> strings, Function<String, String> mappingFunction) {
-        return strings.stream()
-                .map(mappingFunction)
-                .toList();
+        return strings.stream().map(mappingFunction).toList();
     }
 }
