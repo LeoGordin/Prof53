@@ -7,24 +7,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 16 &amp; 17 homework commit">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson18/CrazyLambdas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson18/Lesson18.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson18/ThreadTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson19/Emp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson19/EmpTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson19/Lesson19.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson20/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson20/Lesson20.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson20/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson20/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson21/CollectorsTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson21/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lesson18/CrazyLambdasTest.java" afterDir="false" />
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 21 commit">
+      <change afterPath="$PROJECT_DIR$/copy-of-digits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/digits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dog.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dog.json.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/employee.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/matches.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson21/Homework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/BufferedReaderTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/BufferedWriterTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/FileInputTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/FileTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/Match.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/MatchesTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/PrintTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/ScannerTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/CopyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/DataOutputInputTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/Exercises.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/GsonTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/HTTPTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/Lesson23.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/ObjectOutputInputTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/SocketTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/TokenizerTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/homework/LongestWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/homework/MostUniqueWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testfile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson17/homework/Homework.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson17/homework/Homework.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,23 +78,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_directory_selection": "/Users/levgordin/Desktop/JAVA PRO/Prof53/src/test/java",
-    "last_opened_file_path": "/Users/levgordin/Tel_Ran/JAVA PRO/Prof53",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.build"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_directory_selection&quot;: &quot;/Users/levgordin/Desktop/JAVA PRO/Prof53/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/levgordin/Tel_Ran/JAVA PRO/Prof53&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="lesson18" />
     </key>
@@ -309,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685802363350</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Lesson 21 commit">
+      <created>1686938436665</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1686938436666</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,7 +374,8 @@
     <MESSAGE value="HashMap homework commit" />
     <MESSAGE value="Lesson 17 commit" />
     <MESSAGE value="Lesson 16 &amp; 17 homework commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 16 &amp; 17 homework commit" />
+    <MESSAGE value="Lesson 21 commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 21 commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
