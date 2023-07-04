@@ -7,38 +7,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 21 commit">
-      <change afterPath="$PROJECT_DIR$/copy-of-digits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/digits.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dog.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dog.json.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/employee.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/matches.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson21/Homework.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/BufferedReaderTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/BufferedWriterTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/FileInputTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/FileTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/Match.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/MatchesTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/PrintTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson22/ScannerTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/CopyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/DataOutputInputTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/Exercises.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/GsonTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/HTTPTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/Lesson23.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/ObjectOutputInputTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/SocketTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/TokenizerTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/homework/LongestWord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson23/homework/MostUniqueWords.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testfile.txt" afterDir="false" />
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Homework commit">
+      <change afterPath="$PROJECT_DIR$/result.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson24/Dir.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson24/Lesson24.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson24/StringReaders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/create/CreateXml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/homework/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/jaxb/Catalog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/jaxb/JaxbDeserializeTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/jaxb/JaxbSerializerTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/jaxb/Plant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/string/StringTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/xml/parsing/XmlParsingTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson26/xpath/XPathTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/GenericTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/PairImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/ProducerConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/list/MyGenericArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/list/MyGenericList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson22/MatchesTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson22/MatchesTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -333,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686938436666</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Homework commit">
+      <created>1687508361981</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1687508361981</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -375,7 +375,8 @@
     <MESSAGE value="Lesson 17 commit" />
     <MESSAGE value="Lesson 16 &amp; 17 homework commit" />
     <MESSAGE value="Lesson 21 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 21 commit" />
+    <MESSAGE value="Homework commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
