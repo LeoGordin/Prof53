@@ -8,7 +8,7 @@ package lesson6.list;
 
 public interface MyList <T> {
     int size(); // возвращать размер списка
-    int get(int index); // получение элемента по списку
+    T get(int index); // получение элемента по списку
     boolean contains(T value); // содержится ли элемент в списке
     void set(int index, T value); // изменение элемента
     void add(T value); // добавление элемента в конец
