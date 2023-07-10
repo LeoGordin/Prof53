@@ -2,31 +2,12 @@ package lesson8;
 
 import lesson6.list.MyList;
 
-public class MyLinkedList implements MyList {
+public class MyLinkedList <T> implements MyList <T> {
 
 
+    // добавление элемента в конец списка
     @Override
-    public String toString()
-    {
-        StringBuilder b = new StringBuilder("[");
-        Node n = head;
-        while (n != null)
-        {
-            b.append(n.getValue());
-            n = n.getNext();
-            if(n != null)
-                b.append(", ");
-        }
-        b.append("]");
-        return b.toString();
-    }
-
-    private int size = 0;
-
-
-// добавление элемента в конец списка
-    @Override
-    public void add(int value)
+    public void add(T value)
     {
         size++; // так как мы вставляем новый элемент
         if (head == null)
@@ -41,21 +22,29 @@ public class MyLinkedList implements MyList {
         n.setNext(new Node(value, null));
     }
 
-    @Override
-    public void add(int index, int value) {
-            if(index == 0) {
-                // нужно создать новый узел
-                head = new Node(value, head);
-            }
-            else {
-                Node prev = getNodeByIndex(index - 1);
-                Node next = prev.getNext();
-                Node newNode = new Node(value, next);
-                prev.setNext(newNode);
-            }
-        size++;
-        }
 
+
+    // получение значения элемента по индексу
+    @Override
+    public T get(int index) {
+        Node<T> n = getNodeByIndex(index);
+        return n.getValue();
+    }
+
+    @Override
+    public void add(int index, T value) {
+        if(index == 0) {
+            // нужно создать новый узел
+            head = new Node(value, head);
+        }
+        else {
+            Node prev = getNodeByIndex(index - 1);
+            Node next = prev.getNext();
+            Node newNode = new Node(value, next);
+            prev.setNext(newNode);
+        }
+        size++;
+    }
 
     @Override
     public void remove(int index) {
@@ -80,23 +69,91 @@ public class MyLinkedList implements MyList {
     }
 
 
+    @Override
+    public String toString()
+    {
+        StringBuilder b = new StringBuilder("[");
+        Node n = head;
+        while (n != null)
+        {
+            b.append(n.getValue());
+            n = n.getNext();
+            if(n != null)
+                b.append(", ");
+        }
+        b.append("]");
+        return b.toString();
+    }
 
 
-    //структура для хранения данных в LinkedList
-        private static class Node {
-            private int value; //Значение узла
-            private Node next; //Ссылка на следующий узел
 
-        public Node(int value, Node next) {
+
+
+
+
+    // получение узла по индексу
+    private Node getNodeByIndex(int index)
+    {
+        Node n = head;
+        // нужно index раз сделать getNext()
+        for(int i=0; i < index; i++)
+        {
+            // важно проверить что полученный узел не null
+            if(n != null)
+                n = n.getNext();
+            else
+                // если в процессе определится что текущий узел null нужно
+                throw new IndexOutOfBoundsException();
+        }
+        return n;
+    }
+
+    // изменение значения элемента по порядковому номеру
+    @Override
+    public void set(int index, T value)
+    {
+        Node n = getNodeByIndex(index);
+        if(n != null)
+            n.setValue(value);
+    }
+
+
+
+
+
+
+    // проверка что элемент с нужным значением содержится в LinkedList
+    @Override
+    public boolean contains(T value)
+    {
+        Node n = head; // текущий узел
+        while (n != null)
+        {
+            // проверяем значение
+            if (value.equals(n.getValue())) // если элемент с нужным значением найден
+                return true;
+            n = n.getNext(); // если же нет, проверяем следующий узел
+        }
+        return false;
+    }
+
+
+
+    // структура для хранения данных в LinkedList
+    private static class Node<T> {
+        private T value; // значение
+        private Node next; // ссылка на следующий узел
+
+        public Node(T value, Node next) {
             this.value = value;
             this.next = next;
         }
 
-        public int getValue() {
+        public T getValue() {
             return value;
         }
 
-        public void setValue(int value) {
+        public void setValue(T value) {
             this.value = value;
         }
 
@@ -107,69 +164,36 @@ public class MyLinkedList implements MyList {
         public void setNext(Node next) {
             this.next = next;
         }
-
-
     }
-    // проверка что элемент с нужным значением содержится в LinkedList
+
+    private Node head; // ссылка на первый узел
+
+    private int size = 0; // количество элементов в LinkedList
     @Override
-    public boolean contains (int value) {
-            Node n = head; //текущий узел
-            while (n != null)
-            {
-                // проверить значение
-                if (n.getValue() == value)
-                    return true;
-                    n = n.getNext();
-            }
-            return false;
-    }
-
-    // получение узла по индексу
-    private Node getNodeByIndex(int index) {
-        Node n = head;
-        for (int i=0; i < index; i++) {
-            if (n != null)
-                n.getNext();
-
-            else
-                throw new IndexOutOfBoundsException();
-        }
-        return n;
-    }
-
-    public void set(int index, int value) {
-            Node n = getNodeByIndex(index);
-            if (n != null)
-                n.setValue(value);
-    }
-
-    @Override
-    public int size() {
+    public int size()
+    {
         return size;
     }
 
-    @Override
-    public int get(int index) {
-        return getNodeByIndex(index).getValue();
-    }
 
-
-    private Node head;
-
-    public int removeFirst()
+    // возвращает значение удаляемого первого элемента
+    public T removeFirst()
     {
-        int n = get(0);
+        T value = getFirst();
         remove(0);
-        return n;
+        return value;
     }
 
-    public int getFirst()
+    // вернуть самый первый элемент
+    public T getFirst()
     {
         return get(0);
     }
 
-    public void addFirst(int value)
+    // добавить элемент в начало списка
+    public void addFirst(T value)
     {
         add(0, value);
     }
+
 }

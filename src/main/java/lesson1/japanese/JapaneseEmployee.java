@@ -13,11 +13,11 @@ public class JapaneseEmployee {
         mitsuo.hello();
     }
 
-    public void hello() {
+    public String hello() {
         if (years > 10) {
-            System.out.println("Good afternoon, " + this.firstName + " " + this.lastName);
+            return  "Good afternoon, " + this.firstName + " " + this.lastName;
         } else {
-            System.out.println("Hello " + this.firstName);
+            return "Hello " + this.firstName;
         }
     }
 

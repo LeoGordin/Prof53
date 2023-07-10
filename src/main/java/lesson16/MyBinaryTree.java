@@ -1,17 +1,17 @@
 package lesson16;
 
-public class MyBinaryTree {
+public class MyBinaryTree<T extends Comparable<T>> {
 
-    static class Vortex {
+    public class Vortex implements Comparable<Vortex> {
         Vortex left; // левая дочерняя
         Vortex right; // правая дочерняя
-        int value; // значение вершины
+        T value; // значение вершины
 
-        public Vortex(int value) {
+        public Vortex(T value) {
             this.value = value;
         }
 
-        public Vortex(Vortex left, Vortex right, int value) {
+        public Vortex(Vortex left, Vortex right, T value) {
             this.left = left;
             this.right = right;
             this.value = value;
@@ -53,6 +53,11 @@ public class MyBinaryTree {
                     (right == null ? 0 : right.countVortexes())
                     ;
         }
+
+        @Override
+        public int compareTo(Vortex o) {
+            return value.compareTo(o.value);
+        }
     }
 
     private Vortex root;
@@ -65,30 +70,30 @@ public class MyBinaryTree {
         return root.depth();
     }
 
-    public void add(int value) {
+    public void add(T value) {
         root = addRecursive(root, value);
     }
 
-    private Vortex addRecursive(Vortex current, int value) {
+    private Vortex addRecursive(Vortex current, T value) {
         if (current == null)
             return new Vortex(value);
-        if (value < current.value)
+        if (value.compareTo(current.value) < 0)
             current.left = addRecursive(current.left, value);
-        else if (value > current.value)
+        else if (value.compareTo(current.value) > 0)
             current.right = addRecursive(current.right, value);
         return current;
     }
 
-    public boolean contains(int value) {
+    public boolean contains(T value) {
         return containsRecursive(root, value);
     }
 
-    private boolean containsRecursive(Vortex current, int value) {
+    private boolean containsRecursive(Vortex current, T value) {
         if (current == null)
             return false;
-        if (value == current.value)
+        if (value.equals(current.value))
             return true;
-        else if (value < current.value)
+        else if (value.compareTo(current.value) < 0)
             return containsRecursive(current.left, value);
         return containsRecursive(current.right, value);
 
@@ -98,18 +103,18 @@ public class MyBinaryTree {
         return root.toString();
     }
 
-    public void delete(int value) {
+    public void delete(T value) {
         root = deleteRecursive(root, value);
     }
 
-    public Vortex deleteRecursive(Vortex current, int value) {
+    public Vortex deleteRecursive(Vortex current, T value) {
         if (current == null)
             return null;
-        if (value < current.value) {
+        if (value.compareTo(current.value) < 0) {
             current.left = deleteRecursive(current.left, value);
             return current;
         }
-        else if (value > current.value) {
+        else if (value.compareTo(current.value) > 0) {
             current.right = deleteRecursive(current.right, value);
             return current;
         }
@@ -122,13 +127,13 @@ public class MyBinaryTree {
             return current.left;
         }
 
-        int smallestValue = findSmallestValue(current.right);
+        T smallestValue = findSmallestValue(current.right);
         current.value = smallestValue;
         current.right = deleteRecursive(current.right, smallestValue);
         return current;
     }
 
-    private int findSmallestValue(Vortex current) {
+    private T findSmallestValue(Vortex current) {
         return current.left == null ?
                 current.value :
                 findSmallestValue(current.left);
