@@ -7,29 +7,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson End Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson25/Lesson25.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/exception/DivisionByZeroException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/exception/ExceptionTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/exception/Tester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson28/exception/TryWithResourceTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson29/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson29/MyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson29/Probe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson29/library/BookLendManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lesson29/CalculatorTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lesson29/MyListTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lesson29/ProbeTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lesson29/homework/JapaneseEmployeeTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lesson29/library/LendManagerTester.java" afterDir="false" />
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Homework Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson29/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson29/Homework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson30/CalendarTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson30/DateTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson30/LocalDateTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson30/ZoneDateTimeTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson31/Repeat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson31/SynchronizationTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson31/ThreadPoolTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson31/ThreadTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson29/CarTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson29/HamcrestIntro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/lesson29/LambdaMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson1/japanese/JapaneseEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson1/japanese/JapaneseEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson16/MyBinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson16/MyBinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayListTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayListTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson6/list/MyList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson8/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson8/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson16/Lesson16.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson6/list/MyArrayListTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson7/ForEachTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson7/IteratorTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson8/homework/MyDoubleLinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson8/homework/MyDoubleLinkedListTester.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,14 +93,17 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="lesson18" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="lesson6.list" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.EmpTester">
-    <configuration name="EmpTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson19.EmpTester" />
+  <component name="RunManager">
+    <configuration name="DateTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson30.DateTester" />
       <module name="Prof53" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson19.*" />
+          <option name="PATTERN" value="lesson30.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,12 +111,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lesson19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson19.Lesson19" />
+    <configuration name="SynchronizationTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson31.SynchronizationTester" />
       <module name="Prof53" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson19.*" />
+          <option name="PATTERN" value="lesson31.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTester.testDivision" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarTest.propertyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Prof53" />
       <extension name="coverage">
         <pattern>
@@ -129,40 +133,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="lesson29" />
-      <option name="MAIN_CLASS_NAME" value="lesson29.CalculatorTester" />
-      <option name="METHOD_NAME" value="testDivision" />
+      <option name="MAIN_CLASS_NAME" value="lesson29.CarTest" />
+      <option name="METHOD_NAME" value="propertyTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CrazyLambdasTest.testComposeWithTrimFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CarTest.testCars" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Prof53" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson18.*" />
+          <option name="PATTERN" value="lesson29.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lesson18" />
-      <option name="MAIN_CLASS_NAME" value="lesson18.CrazyLambdasTest" />
-      <option name="METHOD_NAME" value="testComposeWithTrimFunction" />
+      <option name="PACKAGE_NAME" value="lesson29" />
+      <option name="MAIN_CLASS_NAME" value="lesson29.CarTest" />
+      <option name="METHOD_NAME" value="testCars" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CrazyLambdasTest.testTrickyWellDoneSupplier" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HamcrestIntro.stringListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Prof53" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson18.*" />
+          <option name="PATTERN" value="lesson29.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="lesson18" />
-      <option name="MAIN_CLASS_NAME" value="lesson18.CrazyLambdasTest" />
-      <option name="METHOD_NAME" value="testTrickyWellDoneSupplier" />
+      <option name="PACKAGE_NAME" value="lesson29" />
+      <option name="MAIN_CLASS_NAME" value="lesson29.HamcrestIntro" />
+      <option name="METHOD_NAME" value="stringListTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CalculatorTester.testDivision" />
-        <item itemvalue="Application.EmpTester" />
-        <item itemvalue="JUnit.CrazyLambdasTest.testTrickyWellDoneSupplier" />
-        <item itemvalue="Application.Lesson19" />
-        <item itemvalue="JUnit.CrazyLambdasTest.testComposeWithTrimFunction" />
+        <item itemvalue="Application.SynchronizationTester" />
+        <item itemvalue="Application.DateTester" />
+        <item itemvalue="JUnit.CarTest.testCars" />
+        <item itemvalue="JUnit.CarTest.propertyTest" />
+        <item itemvalue="JUnit.HamcrestIntro.stringListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -342,7 +346,23 @@
       <option name="project" value="LOCAL" />
       <updated>1688500320895</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Homework Commit">
+      <option name="closed" value="true" />
+      <created>1689007171128</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689007171128</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Homework Commit">
+      <option name="closed" value="true" />
+      <created>1689007359960</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1689007359960</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -386,7 +406,8 @@
     <MESSAGE value="Lesson 21 commit" />
     <MESSAGE value="Homework commit" />
     <MESSAGE value="Lesson End Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson End Commit" />
+    <MESSAGE value="Homework Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
