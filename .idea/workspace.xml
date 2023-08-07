@@ -7,22 +7,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 31 Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/Intro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/crossbow/Crossbow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/crossbow/CrossbowTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/pi/PiCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/stop/interrupt/ActiveThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/stop/interrupt/InterruptTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/stop/interrupt/SleepyThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/stop/interrupt/StopTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/stop/interrupt/StoppableThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/sync/balance/BalanceExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/sync/counters/Counter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/sync/counters/CounterAtomic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/sync/counters/CounterClassic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/sync/counters/CounterSync.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson32/sync/counters/TestCounter.java" afterDir="false" />
+    <list default="true" id="36f3c8c6-4973-4135-94cb-f23751c3f285" name="Changes" comment="Lesson 32 Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson33/containers/MapTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson33/pool/ForkJoinPoolTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson33/pool/PoolTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson33/queue/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson33/queue/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson33/queue/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson33/queue/Producer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/CompletableFuture0.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/CompletableFutureCombine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/CompletableFutureCompose.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/CompletableFutureCreation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/DoNotDoLikeThis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/FutureExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/Parallel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/currency/Converter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/currency/Exchange.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/currency/FrankfurterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/exceptions/Complete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/exceptions/Exceptionally.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/homework/RandomFunctions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson34/homework/SequentialCompletableFuture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +87,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="lesson33.queue" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -363,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689278494709</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Lesson 32 Commit">
+      <option name="closed" value="true" />
+      <created>1691082255848</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1691082255851</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -409,7 +427,8 @@
     <MESSAGE value="Lesson End Commit" />
     <MESSAGE value="Homework Commit" />
     <MESSAGE value="Lesson 31 Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 31 Commit" />
+    <MESSAGE value="Lesson 32 Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 32 Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
