@@ -1,15 +1,19 @@
 package lesson2.shape;
 
 public class Circle extends Figure{
-    private final double radius;
-    double area() {
-        return Math.PI * radius * radius;
-    }
-    double perimeter() {
-        return 2*Math.PI * radius;
+    private double radii;
+
+    public Circle(double radii) {
+        this.radii = radii;
     }
 
-    public Circle(double radius) {
-        this.radius = radius;
+    @Override
+    double area() {
+        return Math.PI * radii * radii;
+    }
+
+    @Override
+    double perimeter() {
+        return 2*Math.PI * radii;
     }
 }

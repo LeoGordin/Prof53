@@ -1,90 +1,198 @@
 package lesson19;
 
-
-import java.util.Collection;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
+import java.util.function.IntBinaryOperator;
 import java.util.stream.Collectors;
-
-
-import static java.util.Arrays.*;
 
 public class Lesson19 {
     public static void main(String[] args) {
-        List<String> strings = asList("10", "20", "1", "10", "15", "50", "25");
+
+        List<String> strings = Arrays.asList("10", "20", "1", "10", "15", "50", "25");
 
         // только элементы 10
-        System.out.println(strings.stream().filter(string -> string.equals("10")) // промежуточная
-                .toList() // терминальная
+        System.out.println(
+                strings.stream()
+                        .filter(string -> string.equals("10")) // промежуточная
+                        .collect(Collectors.toList()) // терминальная
         );
 
-        System.out.println(strings.stream().skip(3).toList());
+        System.out.println(
+                strings.stream()
+                        .filter(string -> string.equals("10")) // промежуточная
+                        .count() // терминальная
+        );
 
-        System.out.println(strings.stream().skip(2).limit(4).toList());
+        // пропустить 3 первых элемента
+        System.out.println(
+                strings.stream().skip(3).collect(Collectors.toList())
+        );
 
-        System.out.println(strings.stream().distinct().toList());
+        // первые 3 элемента limit(3)
 
-        System.out.println(strings.stream().map(Integer::parseInt).distinct().peek(e -> System.out.println("element is " + e)).map(i -> i * 3).toList());
+        // покажите элементы с 3 по 6
+        System.out.println(
+                strings.stream().limit(6).skip(3).collect(Collectors.toList())
+        );
 
-        System.out.println(strings.stream().sorted().toList());
+        // List<String> strings = Arrays.asList("10", "20", "1", "10", "15", "50", "25");
+        // distinct - не повторяющиеся элементы
+        System.out.println(
+                strings.stream().distinct().collect(Collectors.toList())
+        );
 
-        System.out.println(strings.stream().sorted(Comparator.reverseOrder()).toList());
+        // преобразуйте элементы в Integer, сделайте distinct и умножте на 3
+        System.out.println(
+                strings.stream()
+                        .map(Integer::parseInt)
+                        .distinct()
+                        .peek(e -> System.out.println("element is " + e)) // заглянуть в поток
+                        .map(i -> 3 * i)
+                        .collect(Collectors.toList())
+        );
 
-        List<List<String>> listList = asList(asList("One", "Two", "Three"), List.of("Four"), asList("Five", "Six"));
+        // сортировка в обратном порядке
+        System.out.println(
+                strings.stream()
+                        .sorted(Comparator.reverseOrder())
+                        .collect(Collectors.toList())
+        );
 
-        System.out.println(listList.stream().flatMap(Collection::stream).toList());
+        // flatMap
+        List<List<String>> listOfList = Arrays.asList(
+                Arrays.asList("one", "two", "three"),
+                Arrays.asList("for"),
+                Arrays.asList("five", "six")
+        );
+
+        System.out.println(
+                listOfList.stream()
+                        .flatMap(
+                                list -> list.stream() // уплощение листов
+                        )
+                        .collect(Collectors.toList())
+        );
 
         // терминальные операции
         // findFirst
         // Optional - класс который представляет собой либо
         // значение либо отсутствие значения
-
-        System.out.println(strings.stream().filter(s -> s.contains("7")).findFirst().orElse("No such element"));
-
-        strings.forEach(System.out::println);
-
-        // allMatch(Predicate<T>)
-        // anyMatch(Predicate<T>)
-
-        System.out.println(strings.stream().anyMatch(s -> s.contains("5")));
-
-        System.out.println(strings.stream().allMatch(s -> s.contains("1")));
-
-        System.out.println(strings.stream().noneMatch("8"::contains));
+        System.out.println(
+                strings.stream()
+                        .filter(s -> s.contains("7")) // так как нет элементов с 7
+                        .findFirst() // то вернется Optional.empty()
+        );
 
         System.out.println(
-                // min //max
-                strings.stream().max(Comparator.naturalOrder()).get());
+                strings.stream()
+                        .filter(s -> s.contains("7"))
+                        .findFirst() // если элемента нет
+                        .orElse("No such element") // альтернативное значение
+        );
 
-        //reduce
+        // forEach
+        strings.stream()
+                .forEach(System.out::println);
 
+
+        // List<String> strings = Arrays.asList("10", "20", "1", "10", "15", "50", "25");
+        // anyMatch(Predicate<T>) - хотя бы один элемент удовлетворяет предикату
+        System.out.println(
+                strings.stream()
+                        .anyMatch(s -> s.contains("5"))
+        );
+
+        // allMatch(Predicate<T>) - все элементы удовлетворяют
+        System.out.println(
+                strings.stream()
+                        .allMatch(s -> s.contains("1"))
+        );
+
+        // noneMatch - никакой элемент не удовлетворяет предикату
+        System.out.println(
+                strings.stream().noneMatch("8"::contains)
+        );
+
+        // min / max
+        System.out.println(
+                strings.stream()
+                        .max(Comparator.naturalOrder())
+                        .get()
+        );
+
+        // reduce
         int[] digits = {2, 7, 3};
-        System.out.println(stream(digits).reduce(Integer::sum).getAsInt());
 
-        System.out.println(stream(digits).reduce((i, j) -> i * j).getAsInt());
+        System.out.println(
+                Arrays.stream(digits).reduce(0, (i, j) -> i + j)
+        );
 
-        System.out.println(strings.stream().mapToInt(Integer::parseInt).reduce(Integer::sum).getAsInt());
+        // напишите перемножение через reduce
+        System.out.println(
+                Arrays.stream(digits).reduce((i, j) -> i * j)
+        );
 
+        // List<String> strings = Arrays.asList("10", "20", "1", "10", "15", "50", "25");
+        // преобразуйте в Integer и посчитайте сумму
+        // используя reduce
+        System.out.println(
+                strings.stream()
+                        .mapToInt(Integer::parseInt)
+                        .reduce(0, Integer::sum)
+        );
 
-        strings.stream().reduce((s, s2) -> s + ", " + s2).ifPresent(System.out::println);
+        // объедините в строку все элементы через reduce
+        // "10, 20, 1, 10, 15, 50, 25"
 
-        //collect()
-        //toList() - в список
-        //toCollection() - в коллекцию
-        //toSet() - в набор
-        //collect(groupingBy()) - в map
+        strings.stream()
+                .reduce((s1, s2) -> s1 + ", " + s2)
+                .ifPresent(System.out::println);
 
-        System.out.println(strings.stream().collect(Collectors.groupingBy(String::length)));
+        // collect()
+        // collect(toList()) - в список
+        // collect(toCollection()) - в коллекцию
+        // collect(toSet()) - в набор
+        // collect(groupingBy()) - в map
 
-        System.out.println(strings.stream().collect(Collectors.groupingBy(s -> Integer.parseInt(s) % 5 == 0)));
+        // List<String> strings = Arrays.asList("10", "20", "1", "10", "15", "50", "25");
+
+        System.out.println(
+                strings.stream()
+                        .collect(
+                                Collectors.groupingBy(
+                                        s -> s.length()
+                                )
+                        )
+        );
+
+        // groupingBy
+        // сгруппируйте значения по признаку делятся ли они на 5 без остатка
+        // Map<Boolean, List<String>>
+        System.out.println(
+                strings.stream()
+                        .collect(
+                                Collectors.groupingBy(
+                                        s -> Integer.parseInt(s) % 5 == 0
+                                )
+                        )
+        );
 
         // toMap
-
-        System.out.println(strings.stream().distinct().collect(Collectors.toMap(Function.identity(),
-//                                s -> s, // ключ
-                String::length //значение
-        )));
+        // List<String> strings = Arrays.asList("10", "20", "1", "10", "15", "50", "25");
+        System.out.println(
+                strings.stream()
+                        .distinct()
+                        .collect(
+                                Collectors.toMap(
+                                        Function.identity(), // отдает вход на выход
+                                        // s -> s, // ключ
+                                        s -> s.length() // значение
+                                )
+                        )
+        );
 
     }
 }

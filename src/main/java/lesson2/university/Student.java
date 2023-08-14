@@ -5,7 +5,7 @@ public class Student extends Person {
     private String program;
 
     public Student(String name, int age, int year, String program) {
-        super(name, age);
+        super(name, age); // вызов конструктора супер-класса
         this.year = year;
         this.program = program;
     }
@@ -26,8 +26,10 @@ public class Student extends Person {
         this.program = program;
     }
 
-    public void introduce() {
+    @Override
+    public void introduce(){
         super.introduce();
-        System.out.println("Student " + getName() + " year " + getYear());
+        System.out.println("Student " + getName() + " year " + year);
     }
+
 }

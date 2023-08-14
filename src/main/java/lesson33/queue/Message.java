@@ -1,7 +1,7 @@
 package lesson33.queue;
 
 public class Message {
-    private String msg;
+    private final String msg;
 
     public Message(String msg) {
         this.msg = msg;

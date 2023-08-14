@@ -1,22 +1,21 @@
 package lesson11;
 
-import java.util.NoSuchElementException;
-
 public class CustomArrayDeque implements CustomDeque {
-    private int[] source = new int[INITIAL_CAPACITY]; // массив с элементами дека
+    private int [] source = new int[INITIAL_CAPACITY]; // массив с элементами дека
     private int size = 0; // сколько элементов в нашем деке
     private int firstElementIndex = 0; // индекс первого элемента дека внутри массива
 
     private static final int INITIAL_CAPACITY = 4;
 
+    @Override
     public String toString() {
         StringBuilder b = new StringBuilder("[");
-        for (int i = 0; i < size; i++) {
-            int v = source[(firstElementIndex + i) % source.length];
+        for(int i = 0; i < size; i++)
+        {
+            int v = source[ (firstElementIndex + i) % source.length ];
             b.append(v);
-            if (i < size - 1) {
+            if(i < size - 1)
                 b.append(", ");
-            }
         }
         b.append("]");
         return b.toString();
@@ -29,7 +28,7 @@ public class CustomArrayDeque implements CustomDeque {
 
     @Override
     public void addFirst(int value) {
-        if (size() == source.length) // если в массиве source больше нет свободных ячеек
+        if(size() == source.length) // если в массиве source больше нет свободных ячеек
             increaseCapacity(); // сделает массив в 2 раза большей длины и копирует туда элементы
         // уменьшить firstElementIndex на 1 c учетом размера source
         firstElementIndex = (firstElementIndex - 1 + source.length) % source.length;
@@ -38,28 +37,32 @@ public class CustomArrayDeque implements CustomDeque {
     }
 
     private void increaseCapacity() {
-        int[] newSource = new int[source.length * 2];
-        int j = 0; // начальный индекс в новом массиве
-        for (int i = firstElementIndex; i < source.length; i++) {
+        int [] newSource = new int[source.length * 2];
+        int j = 0; // начальный индекс в массиве newSource
+        for(int i = firstElementIndex; i < source.length; i++)
+        {
             newSource[j++] = source[i];
         }
-        for (int i = 0; i < firstElementIndex; i++) {
+        for(int i = 0; i < firstElementIndex; i++)
+        {
             newSource[j++] = source[i];
         }
+        firstElementIndex = 0;
         source = newSource;
     }
 
     // получение первого элемента дека
     @Override
     public int getFirst() {
-        if (size() == 0) throw new IndexOutOfBoundsException();
+        if(size() == 0)
+            throw new IndexOutOfBoundsException();
         return source[firstElementIndex];
     }
 
     // вернуть значение "первого" элемента и удалить его из дека
     @Override
     public int removeFirst() {
-        if (size() == 0)
+        if(size() == 0)
             throw new IndexOutOfBoundsException();
         // сохранить значение под индексом firstElementIndex
         int value = source[firstElementIndex];
@@ -81,21 +84,19 @@ public class CustomArrayDeque implements CustomDeque {
 
     @Override
     public int getLast() {
-        if (size == 0)
+        if(size() == 0)
             throw new IndexOutOfBoundsException();
-        int lastElementIndex = (firstElementIndex + size() -1) % source.length;
+        int lastElementIndex = (firstElementIndex + size() - 1) % source.length;
         return source[lastElementIndex];
     }
 
     @Override
     public int removeLast() {
-        if (size == 0)
+        if(size() == 0)
             throw new IndexOutOfBoundsException();
-        int lastElementIndex = (firstElementIndex + size() -1) % source.length;
+        int lastElementIndex = (firstElementIndex + size() - 1) % source.length;
         int result = source[lastElementIndex];
         size--;
-
-        // вернуть сохраненное значение
         return result;
     }
 }

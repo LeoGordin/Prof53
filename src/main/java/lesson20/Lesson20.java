@@ -1,9 +1,10 @@
 package lesson20;
 
+import lesson2.crossword.B;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -14,16 +15,17 @@ public class Lesson20 {
     // flatMap 1 -> n
 
     public static void main(String[] args) {
-        Integer [][] twoDimensionalArray = {
-                {1,2,3},
-                {5,6,7, 10},
+        Integer[][] twoDimensionalArray = {
+                {1, 2, 3, -5},
+                {5, 6, 7, 10},
                 {11},
                 {14, 22}
         };
 
+
         System.out.println(
                 Arrays.stream(twoDimensionalArray)
-                        .flatMap(Arrays::stream)
+                        .flatMap(array -> Arrays.stream(array))
                         .collect(Collectors.toList())
         );
 
@@ -35,36 +37,48 @@ public class Lesson20 {
                 )
         );
 
+        // соберите в контейнер
+        // не повторяющиеся имена
+        // не содержащие буквы 'a' в любом регистре
         System.out.println(
-                Stream.of(names)
-                        .flatMap(List::stream)
-                        .filter(strings -> strings.stream().noneMatch(s -> s.contains("a")))
+                names.stream() // List<String>
+                        .flatMap(list -> list.stream()) // String
+                        .filter(string -> !string.toLowerCase().contains("a"))
                         .collect(Collectors.toSet())
         );
 
-        List<String> nonUniqueNames = Arrays.asList("Kris", "Tom","Tom","Tim","Tim");
+        // Kris Tom Tom Tim Tim
+        List<String> nonUniqueNames = Arrays.asList("Kris", "Tom", "Tom", "Tim", "Tim");
+        // выведите только имена присутствующие один раз
 
         System.out.println(
                 nonUniqueNames.stream()
-                        .collect(Collectors.groupingBy(
-                                word -> word
-                        )).entrySet().stream()
+                        .collect(
+                                Collectors.groupingBy(
+                                        word -> word
+                                )
+                        )
+                        .entrySet().stream()
                         .filter(pair -> pair.getValue().size() == 1)
-                        .map(Map.Entry::getKey)
+                        .map(pair -> pair.getKey())
                         .collect(Collectors.toList())
-
         );
 
-        List<String> countries = new ArrayList<>(Arrays.asList(
-                "Chad", "Sweden", "Finland", "Germany", "Poland", "France",
-                "Norway", "Belgium", "Netherlands"
-        ));
+        List<String> countries = Arrays.asList(
+                "Tchad", "Sweden", "Finland", "Germany", "Poland", "France",
+                "Norway", "Belgium", "Holland"
+        );
 
+        // сгруппируйте по длине
         System.out.println(
-                new ArrayList<>(countries.stream()
-                        .collect(Collectors.groupingBy(
-                                String::length
-                        )).keySet())
+                countries.stream()
+                        .collect(
+                                Collectors.groupingBy(country -> country.length())
+                        )
+                        // соберите в List длины стран - первые элементы пар (ключи)
+                        .entrySet().stream()
+                        .map(pair -> pair.getKey())
+                        .collect(Collectors.toList())
         );
 
         Order grocery = new Order(
@@ -79,31 +93,35 @@ public class Lesson20 {
         );
 
         List<Order> orders = Arrays.asList(grocery, utility);
+        // подсчитайте затраты из двух счетов
+        // 5*1.45+3*0.79 ...
 
         System.out.println(
-                orders.stream()
-                        .flatMap(order -> order.getItems().stream())
-                        .mapToDouble(item -> item.getQuantity() * item.getUnitPrice())
+                orders.stream() // Order
+                        .flatMap(order -> order.getItems().stream()) // OrderItem
+                        .mapToDouble(item -> item.getQuantity() * item.getUnitPrice()) // double
                         .sum()
         );
 
-        String [][] words = {
+        String[][] words = {
                 {"Hello", "world"},
                 {"Hello", "java", "doc"},
                 {"Hello", "student"},
                 {"Welcome", "to", "university"}
         };
 
+        // посчитайте количество слов (10)
         System.out.println(
                 Arrays.stream(words)
                         .flatMap(Arrays::stream)
                         .count()
         );
 
+        // посчитайте количество уникальных слов (8)
         System.out.println(
                 Arrays.stream(words)
                         .flatMap(Arrays::stream)
-                        .distinct()
+                        .distinct() // только уникальные
                         .count()
         );
 
@@ -114,7 +132,8 @@ public class Lesson20 {
                 new Book("The catcher in the ray", "Jerome", "Ernest")
         );
 
-// посчитайте уникальных авторов (7)
+
+        // посчитайте уникальных авторов (7)
         System.out.println(
                 books.stream() // Book
                         .flatMap(book -> book.getAuthors().stream()) // String
@@ -122,10 +141,12 @@ public class Lesson20 {
                         .count()
         );
 
+        // для книг в названии которых больше 2 слов
+        // распечатайте уникальных авторов в имени которых есть буква 'e'
         System.out.println(
-                books.stream()
+                books.stream() // Book
                         .filter(book -> book.getTitle().split(" ").length > 2)
-                        .flatMap(book -> book.getAuthors().stream())
+                        .flatMap(book -> book.getAuthors().stream()) // String
                         .filter(author -> author.toLowerCase().contains("e"))
                         .collect(Collectors.toSet())
         );
@@ -137,13 +158,11 @@ public class Lesson20 {
                 )
         );
 
-        System.out.println(
-                Stream.iterate(200, i -> i + 5)
-                        .takeWhile(i -> i < 230)  // берет элементы из потока пока выполняется предикат
-                        // после этого поток закрывается
-                        .collect(Collectors.toList())
-        );
-
-
+//        System.out.println(
+//                Stream.iterate(200, i -> i + 5)
+//                        .takeWhile(i -> i < 230)  // берет элементы из потока пока выполняется предикат
+//                        // после этого поток закрывается
+//                        .collect(Collectors.toList())
+//        );
     }
 }

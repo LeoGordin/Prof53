@@ -14,7 +14,7 @@ public class GsonTester {
 
         String zina = "{\"name\":\"Zina Pavlova\",\"year\":1,\"group\":\"B-55\"}";
 
-        Student zi = gson.fromJson(zina, Student.class); // десериализация из json
+        Student zi = gson.fromJson(zina, Student.class); // десеарилизация из json
         System.out.println(zi.getName());
     }
 }

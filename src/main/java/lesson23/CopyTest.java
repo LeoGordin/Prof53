@@ -9,11 +9,12 @@ public class CopyTest {
         try(
                 FileInputStream fis = new FileInputStream("digits.txt");
                 FileOutputStream fos = new FileOutputStream("copy-of-digits.txt")
-            )
+                )
         {
-            byte [] buffer = new byte[10];
+            byte [] buffer = new byte[10]; // буфер куда будем читать данные из файла
             int numberOfBytes = 0;
-            while ((numberOfBytes = fis.read(buffer)) > 0) {
+            while ( (numberOfBytes = fis.read(buffer)) > 0  )
+            {
                 fos.write(buffer, 0, numberOfBytes);
             }
         }

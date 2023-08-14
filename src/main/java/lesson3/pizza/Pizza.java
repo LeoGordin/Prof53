@@ -1,28 +1,35 @@
 package lesson3.pizza;
 
+// классы
+// крокодил данди
+// CrocodileDandy
+
+// свойство или функция
+// calculateSalary
+
+// константы
+// PI
+
 public class Pizza {
+    // private String size;
+    private PizzaSize size;
+    private int ham;
+    private int cheese;
+    private int peperoni;
+    private int pineapple;
 
-    //private static String size;
-    private final PizzaSize size;
-    private final int ham;
-    private final int cheese;
-    private final int pepperoni;
-    private final int pineapple;
-
-    public Pizza(PizzaSize size, int ham, int cheese, int pepperoni, int pineapple) {
+    public Pizza(PizzaSize size, int ham, int cheese, int peperoni, int pineapple) {
         this.size = size;
         this.ham = ham;
         this.cheese = cheese;
-        this.pepperoni = pepperoni;
+        this.peperoni = peperoni;
         this.pineapple = pineapple;
     }
 
     public int calculatePrice()
     {
+
         int price = 0;
-        // SMALL 10
-        // MIDDLE 12
-        // LARGE 14
         switch (size)
         {
             case SMALL:
@@ -35,15 +42,13 @@ public class Pizza {
                 price += 14;
                 break;
         }
-        // за каждый дополнительный топпинг по 2
-        price += (ham + cheese + pepperoni + pineapple) * 2;
+        price += (ham + cheese + peperoni + pineapple) * 2;
         return price;
     }
 
+
     public static void main(String[] args) {
-        Pizza p1 = new Pizza(PizzaSize.SMALL, 2,2,1,0);
+        Pizza p1 = new Pizza(PizzaSize.SMALL, 1, 0, 1, 3);
         System.out.println(p1.calculatePrice());
     }
-
-
 }

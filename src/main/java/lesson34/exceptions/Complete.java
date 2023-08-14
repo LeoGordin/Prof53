@@ -14,11 +14,12 @@ public class Complete {
                         .thenApply(r -> r * 4)
                         .thenApply(r -> "apply>> " + r)
                         .whenComplete((s, t) -> {
-                            if (t != null)
+                            if(t != null)
                                 System.out.println(t.getCause());
                             else
                                 System.out.println("result is: " + s);
-                        });
+                        })
+                ;
 
         try {
             res.get();

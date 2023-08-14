@@ -1,8 +1,8 @@
 package lesson14;
 
 public class Fruit {
-    String name;
-    int calories;
+    private String name;
+    private int calories;
 
     public Fruit(String name, int calories) {
         this.name = name;

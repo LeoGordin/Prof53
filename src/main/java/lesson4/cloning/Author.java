@@ -1,6 +1,6 @@
 package lesson4.cloning;
 
-public class Author {
+public class Author implements Cloneable {
     private String name;
 
     public Author(String name) {
@@ -9,6 +9,11 @@ public class Author {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    protected Author clone() throws CloneNotSupportedException {
+        return (Author) super.clone();
     }
 
     public void setName(String name) {
@@ -21,5 +26,4 @@ public class Author {
                 "name='" + name + '\'' +
                 '}';
     }
-
 }

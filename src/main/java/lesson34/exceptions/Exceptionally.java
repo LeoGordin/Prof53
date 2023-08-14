@@ -5,13 +5,14 @@ import java.util.concurrent.ExecutionException;
 
 public class Exceptionally {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        //CompletableFuture<String> cf = CompletableFuture.supplyAsync(() -> "234");
-        CompletableFuture<String> cf = CompletableFuture.supplyAsync(() -> "hello");
+        CompletableFuture<String> cf = CompletableFuture.supplyAsync(() -> "234");
+        // CompletableFuture<String> cf = CompletableFuture.supplyAsync(() -> "hello");
 
         CompletableFuture<String> res =
                 cf.thenApply(Integer::parseInt)
                         .thenApply(r -> r * 4)
                         .thenApply(r -> "apply>> " + r)
+                        // срабатывает только при исключении
                         .exceptionally(t -> "Exception: " + t.getCause())
                 ;
 

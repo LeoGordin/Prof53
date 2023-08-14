@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CATALOG name="private" size="small">
+    <PLANT plantid="999">
+        <AVAILABILITY>AVAILABLE</AVAILABILITY>
+        <BOTANICAL>TROPICAL</BOTANICAL>
+        <COMMON>RARE</COMMON>
+        <LIGHT>SHADOW</LIGHT>
+        <ZONE>INDUSTRIAL</ZONE>
+    </PLANT>
+</CATALOG>

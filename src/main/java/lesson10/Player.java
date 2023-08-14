@@ -1,8 +1,8 @@
 package lesson10;
 
 public class Player {
-    private final int id;
-    private final String name;
+    private int id;
+    private String name;
 
     public Player(int id, String name) {
         this.id = id;

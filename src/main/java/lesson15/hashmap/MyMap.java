@@ -8,4 +8,3 @@ public interface MyMap {
     String get(String key); // получение значения по ключу
     String remove(String key); // удаление значения по ключу
 }
-

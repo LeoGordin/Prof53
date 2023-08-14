@@ -6,12 +6,12 @@ package lesson6.list;
 
 // класс может реализовывать несколько интерфейсов, но наследовать только один класс
 
-public interface MyList <T> {
+public interface MyList {
     int size(); // возвращать размер списка
-    T get(int index); // получение элемента по списку
-    boolean contains(T value); // содержится ли элемент в списке
-    void set(int index, T value); // изменение элемента
-    void add(T value); // добавление элемента в конец
-    void add(int index, T value); // добавление элемента
+    int get(int index); // получение элемента по списку
+    boolean contains(int value); // содержится ли элемент в списке
+    void set(int index, int value); // изменение элемента
+    void add(int value); // добавление элемента в конец
+    void add(int index, int value); // добавление элемента
     void remove(int index); // удаление элемента по индексу
 }

@@ -1,12 +1,12 @@
 package lesson2.bank;
 
 public class LoanTaker {
-
+    // кредитополучатель
     private String name;
-    private double yearlyIncome;
-    private int age;
+    private double yearlyIncome; // готовой доход
+    private int age; // полных лет
 
-    public LoanTaker (String name, double yearlyIncome, int age) {
+    public LoanTaker(String name, double yearlyIncome, int age) {
         this.name = name;
         this.yearlyIncome = yearlyIncome;
         this.age = age;

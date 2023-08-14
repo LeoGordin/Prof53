@@ -1,16 +1,16 @@
 package lesson29;
 
-    import java.util.AbstractList;
+import java.util.AbstractList;
 
-    public class MyList extends AbstractList<String> {
+public class MyList extends AbstractList<String> {
 
-        @Override
-        public String get(int i) {
-            return null;
-        }
-
-        @Override
-        public int size() {
-            return 0;
-        }
+    @Override
+    public String get(int i) {
+        return null;
     }
+
+    @Override
+    public int size() {
+        return 0;
+    }
+}

@@ -6,10 +6,8 @@ import java.util.Queue;
 
 public class QueueTester {
     public static void main(String[] args) {
-
-
         // Queue - интерфейс
-        // позволяет доавлять элементы в конец и получать их из начала
+        // позволяет добавлять элементы в конец и получать их из начала
 
         Queue<String> bankingQueue = new LinkedList<>();
 
@@ -17,26 +15,27 @@ public class QueueTester {
         bankingQueue.offer("Sveta Petrova");
         bankingQueue.offer("Semen Deznev");
         String element = null;
-        while ((element = bankingQueue.poll()) != null){
-            System.out.println("Element " + element);
+        while ((element = bankingQueue.poll()) != null)
+        {
+            System.out.println("element: " + element);
         }
 
-        //PriorityQueue
-        //Прииоритет определяется на основе Компаратора
+        // PriorityQueue
+        // приоритет определяется на основе компаратора
         Queue<String> priorityCustomers = new PriorityQueue<>();
         priorityCustomers.add("One");
         priorityCustomers.add("Two");
         priorityCustomers.add("Three");
         priorityCustomers.add("Four");
         priorityCustomers.add("Five");
-        priorityCustomers.add("Six");
 
-        while (!priorityCustomers.isEmpty()) {
+        while (!priorityCustomers.isEmpty())
+        {
             String e = priorityCustomers.poll();
-            System.out.println("Priority ");
+            System.out.println("priority: " + e);
         }
 
 
-    }
 
+    }
 }

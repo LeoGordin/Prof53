@@ -8,5 +8,4 @@ public class Exchange {
     public String from;
     public String to;
     public Map<String, Double> rates = new HashMap<>();
-
 }

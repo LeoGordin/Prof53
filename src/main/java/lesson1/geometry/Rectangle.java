@@ -1,14 +1,18 @@
 package lesson1.geometry;
 
-public class Rectangle{
+public class Rectangle {
     // добавьте свойства se и nw - юго восточная точка и северозападная
-    Point se;
-    Point nw;
+    private Point se;
+    private Point nw;
+    // добавьте конструктор
 
     public Rectangle(Point se, Point nw) {
         this.se = se;
         this.nw = nw;
     }
+
+    // геттеры и сеттеры
+
 
     public Point getSe() {
         return se;
@@ -26,10 +30,10 @@ public class Rectangle{
         this.nw = nw;
     }
 
-    double area()
+    int area()
     {
-        int sideOne = getSe().getX() - getNw().getY();
-        int sideTwo = getNw().getY() - getSe().getY();
-        return Math.abs(sideOne * sideTwo);
+        int sizeX = se.getX() - nw.getX();
+        int sizeY = se.getY() - nw.getY();
+        return Math.abs(sizeY*sizeX);
     }
 }

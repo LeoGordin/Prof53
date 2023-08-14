@@ -5,7 +5,7 @@ public class MyGenericArrayList<T> implements MyGenericList<T> {
     private static final int INITIAL_SIZE = 4; // начальная емкость контейнера
     private int size = 0; // длина контейнера
 
-    private  T [] data; // именно тут будут храниться элементы
+    private T [] data; // именно тут будут храниться элементы
 
     public MyGenericArrayList() {
         data = (T[]) new Object[INITIAL_SIZE];
@@ -24,25 +24,28 @@ public class MyGenericArrayList<T> implements MyGenericList<T> {
             throw new IndexOutOfBoundsException();
         return data[index];
     }
-    @Override
+
     // возвращает true если элемент с таким значением уже
     // существует в контейнере
+    @Override
     public boolean contains(T value) {
         for (int i = 0; i < size; i++) {
-            if (data[i] == value)
+            if (data[i].equals(value))
                 return true;
         }
         return false;
     }
-    @Override
+
     // заменить значение элемента по index на value
+    @Override
     public void set(int index, T value) {
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException();
         data[index] = value;
     }
-    @Override
+
     // добавление нового элемента в конец контейнера
+    @Override
     public void add(T value) {
         if (size == data.length) {
             // увеличить размер массива data
@@ -60,6 +63,7 @@ public class MyGenericArrayList<T> implements MyGenericList<T> {
         data = (T[]) newData;
     }
 
+    @Override
     public void add(int index, T value) {
         if (index < 0 || index >= size)
             throw new IndexOutOfBoundsException();

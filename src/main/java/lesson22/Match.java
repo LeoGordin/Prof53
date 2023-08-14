@@ -2,6 +2,7 @@ package lesson22;
 
 import java.util.Calendar;
 
+// 2022, 9, 10, TSG 1899 Hoffenheim, 4:01, 1. FSV Mainz 05, 20114, PreZero Arena
 public class Match {
     private Calendar date;
     private String team1, result, team2, stadium;
@@ -10,8 +11,8 @@ public class Match {
     public Match(Calendar date, String team1, String result, String team2, String stadium, int watchers) {
         this.date = date;
         this.team1 = team1;
-        this.team2 = team2;
         this.result = result;
+        this.team2 = team2;
         this.stadium = stadium;
         this.watchers = watchers;
     }
@@ -24,12 +25,12 @@ public class Match {
         return team1;
     }
 
-    public String getTeam2() {
-        return team2;
-    }
-
     public String getResult() {
         return result;
+    }
+
+    public String getTeam2() {
+        return team2;
     }
 
     public String getStadium() {
@@ -45,8 +46,8 @@ public class Match {
         return "Match{" +
                 "date=" + date +
                 ", team1='" + team1 + '\'' +
-                ", team2='" + team2 + '\'' +
                 ", result='" + result + '\'' +
+                ", team2='" + team2 + '\'' +
                 ", stadium='" + stadium + '\'' +
                 ", watchers=" + watchers +
                 '}';

@@ -8,6 +8,10 @@ public class StoppableThread extends Thread {
         this.hasToStop = hasToStop;
     }
 
+    public void setHasToStop(Boolean hasToStop) {
+        this.hasToStop = hasToStop;
+    }
+
     @Override
     public void run() {
         for(int i = 0; i < 10; i++)
@@ -24,9 +28,5 @@ public class StoppableThread extends Thread {
                 return;
             }
         }
-    }
-
-    public void setHasToStop(boolean b) {
-        this.hasToStop = hasToStop;
     }
 }

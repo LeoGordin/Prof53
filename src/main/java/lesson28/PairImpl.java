@@ -1,6 +1,6 @@
 package lesson28;
 
-public class PairImpl<K,V> implements Pair<K,V>{
+public class PairImpl<K,V> implements Pair<K,V> {
 
     private K key;
     private V value;
@@ -11,14 +11,6 @@ public class PairImpl<K,V> implements Pair<K,V>{
     }
 
     @Override
-    public String toString() {
-        return "PairImpl{" +
-                "k=" + key +
-                ", v=" + value +
-                '}';
-    }
-
-    @Override
     public K getKey() {
         return key;
     }
@@ -26,5 +18,13 @@ public class PairImpl<K,V> implements Pair<K,V>{
     @Override
     public V getValue() {
         return value;
+    }
+
+    @Override
+    public String toString() {
+        return "P{" +
+                "f=" + key +
+                ", l=" + value +
+                '}';
     }
 }

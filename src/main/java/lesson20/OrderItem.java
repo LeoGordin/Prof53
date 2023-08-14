@@ -5,12 +5,6 @@ public class OrderItem {
     private int quantity;
     private double unitPrice;
 
-    public OrderItem(String title, int quantity, double uniquePrice) {
-        this.title = title;
-        this.quantity = quantity;
-        this.unitPrice = uniquePrice;
-    }
-
     public String getTitle() {
         return title;
     }
@@ -21,5 +15,11 @@ public class OrderItem {
 
     public double getUnitPrice() {
         return unitPrice;
+    }
+
+    public OrderItem(String title, int quantity, double unitPrice) {
+        this.title = title;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
     }
 }

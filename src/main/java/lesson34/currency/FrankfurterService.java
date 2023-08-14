@@ -1,5 +1,6 @@
 package lesson34.currency;
 
+import lesson14.retro.CurrencyExchange;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

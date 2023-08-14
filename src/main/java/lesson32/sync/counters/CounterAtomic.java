@@ -2,8 +2,9 @@ package lesson32.sync.counters;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class CounterAtomic implements Runnable, Counter {
+public class CounterAtomic implements Runnable, Counter{
 
+    // Atomic типы обеспечивают атомарные операции
     private AtomicInteger counter = new AtomicInteger();
 
     @Override

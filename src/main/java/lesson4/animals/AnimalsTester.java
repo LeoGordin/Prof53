@@ -2,13 +2,17 @@ package lesson4.animals;
 
 public class AnimalsTester {
     public static void main(String[] args) {
-        Cat cat = new Cat("Kiitty");
+        // Animal animal = new Animal("aaa");
+        Cat cat = new Cat("Kitty");
         cat.greets();
 
-        Dog dog = new Dog("Doge");
-        BigDog doggo = new BigDog("Biggo");
+        Dog dog = new Dog("dog");
+        BigDog bigDog = new BigDog("big dog");
 
-        doggo.greets(dog);
-        dog.greets(doggo);
+        dog.greets(dog);
+        dog.greets(bigDog);
+
+        bigDog.greets(dog);
+        bigDog.greets(bigDog);
     }
 }

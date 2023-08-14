@@ -12,9 +12,6 @@ public class Book implements Cloneable {
         this.author = author;
     }
 
-    public Book(String warAndPeace, int year) {
-    }
-
     public String getName() {
         return name;
     }
@@ -26,6 +23,7 @@ public class Book implements Cloneable {
     public int getYear() {
         return year;
     }
+
     public void setYear(int year) {
         this.year = year;
     }
@@ -47,4 +45,10 @@ public class Book implements Cloneable {
                 '}';
     }
 
+    @Override
+    protected Book clone() throws CloneNotSupportedException {
+        Book newBook = (Book) super.clone();
+        newBook.author = (Author) author.clone();
+        return newBook;
+    }
 }

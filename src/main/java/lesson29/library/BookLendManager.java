@@ -9,7 +9,7 @@ public class BookLendManager {
 
     // будем тестировать выдачу книги определенному пользователю
     public void checkout(int bookId, int memberId) {
-        if (service.inStock(bookId)) {
+        if (service.isStock(bookId)) {
             service.lend(bookId, memberId);
         } else {
             throw new IllegalStateException("Book is not available!");
@@ -18,6 +18,9 @@ public class BookLendManager {
 }
 
 interface BookService {
-    boolean inStock(int bookId);  // доступна ли книга для выдачи
-    void lend(int bookId, int memberId);    // выдаем книгу пользователю
+    // доступна ли книга для выдачи
+    boolean isStock(int bookId);
+
+    // выдаем книгу пользователю
+    void lend(int bookId, int memberId);
 }

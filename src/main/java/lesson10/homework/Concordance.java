@@ -6,7 +6,9 @@ import java.util.Set;
 public class Concordance {
     public static void main(String[] args) {
         String sentence = "один раз это один раз";
+        System.out.println(concordance(sentence));
     }
+
     // поиск элемента в списке
     // если не нашли, возвращаем null
     public static Element findElement(Set<Element> elements, Element e)
@@ -40,5 +42,5 @@ public class Concordance {
 
         return r;
     }
-}
 
+}

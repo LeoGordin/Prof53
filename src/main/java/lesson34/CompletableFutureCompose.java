@@ -1,6 +1,8 @@
 package lesson34;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
+import java.util.function.Function;
 
 public class CompletableFutureCompose {
     public static void main(String[] args) {
@@ -22,18 +24,18 @@ public class CompletableFutureCompose {
     }
 }
 
-    class UserRating {
-        private UserInfo info;
+class UserRating {
+    private UserInfo info;
 
-        public UserRating(UserInfo info) {
-            this.info = info;
-        }
+    public UserRating(UserInfo info) {
+        this.info = info;
     }
+}
 
-    class UserInfo {
-        private int userId;
+class UserInfo {
+    private int userId;
 
-        public UserInfo(int userId) {
-            this.userId = userId;
-        }
+    public UserInfo(int userId) {
+        this.userId = userId;
     }
+}

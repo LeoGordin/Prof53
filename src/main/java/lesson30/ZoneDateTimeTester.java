@@ -9,8 +9,14 @@ public class ZoneDateTimeTester {
 
         System.out.println(zonedDateTime);
 
+
         System.out.println(
                 zonedDateTime.toInstant().atZone(ZoneId.of("Pacific/Midway"))
         );
+
+        System.out.println(
+                ZoneId.getAvailableZoneIds()
+        );
+
     }
 }

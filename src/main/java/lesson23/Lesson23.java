@@ -15,11 +15,11 @@ public class Lesson23 {
                 // try, catch ...
                 FileReader fileReader = new FileReader("digits.txt");
                 BufferedReader bufferedReader = new BufferedReader(fileReader);
-        )
+                )
         {
             System.out.println(
                     bufferedReader.lines()
-                            .map(Integer::parseInt)
+                            .map(string -> Integer.parseInt(string))
                             .reduce(0, Integer::sum)
             );
             // важно закрывать потоки ввода-вывода, так это

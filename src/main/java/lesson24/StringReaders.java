@@ -1,6 +1,7 @@
 package lesson24;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.stream.Collectors;
@@ -14,14 +15,20 @@ public class StringReaders {
 
         StringReader sr = new StringReader(data);
         BufferedReader br = new BufferedReader(sr);
-        System.out.println(br.lines()
-                .map(String::toUpperCase).collect(Collectors.toSet())
+
+        System.out.println(
+                br.lines()
+                        .map(String::toUpperCase)
+                        .collect(Collectors.toSet())
         );
+
 
         StringWriter sw = new StringWriter();
         sw.append("hello\n");
-        sw.append("it's a new line \n");
+        sw.append("it's a new line");
+
         sw.flush();
+
         System.out.println(sw.toString());
     }
 }

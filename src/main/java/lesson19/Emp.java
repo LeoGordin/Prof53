@@ -5,6 +5,15 @@ public class Emp {
     private int age;
     private String position;
 
+    @Override
+    public String toString() {
+        return "E{" +
+                "n='" + name + '\'' +
+                ", a=" + age +
+                ", p='" + position + '\'' +
+                '}';
+    }
+
     public Emp(String name, int age, String position) {
         this.name = name;
         this.age = age;
@@ -21,14 +30,5 @@ public class Emp {
 
     public String getPosition() {
         return position;
-    }
-
-    @Override
-    public String toString() {
-        return "Emp{" +
-                "n='" + name + '\'' +
-                ", a=" + age +
-                ", p='" + position + '\'' +
-                '}';
     }
 }

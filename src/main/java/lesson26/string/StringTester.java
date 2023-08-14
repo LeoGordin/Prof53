@@ -5,6 +5,10 @@ import java.util.Random;
 public class StringTester {
     public static void main(String[] args) {
         String max = "Max";
+        String anotherMax = "Max";
+        System.out.println(anotherMax == max); //
+
+
         String newMax = max;
 
         // == для объектов сравнивает их адрес в памяти
@@ -14,6 +18,7 @@ public class StringTester {
         max += " Kotkov";
         System.out.println(max == newMax); // false
 
+
         // ВСЕГДА при изменении строки создается новая строка
         // НИКОГДА МАССОВО НЕ КОНКАТЕНИРУЙТЕ СТРОКИ
 
@@ -21,23 +26,19 @@ public class StringTester {
         StringBuilder maxBuilder = new StringBuilder("Max");
 
         StringBuilder anotherMaxBuilder = maxBuilder;
-        System.out.println(anotherMaxBuilder == maxBuilder); // true
-
         System.out.println("anotherMaxBuilder == maxBuilder: " + (anotherMaxBuilder == maxBuilder)); // true
-        maxBuilder.append(" Kotkov ");
-
+        maxBuilder.append(" Kotkov");
         System.out.println("anotherMaxBuilder == maxBuilder: " + (anotherMaxBuilder == maxBuilder)); // true
 
         System.out.println(maxBuilder.toString());
 
+//        for(int i = 0; i < 10; i++)
+//        {
+//            addManyDoublesUsingString(); // 9000 милисекунд
+//        }
         for(int i = 0; i < 10; i++)
         {
-            addManyDoublesUsingString();
-        }
-
-        for(int i = 0; i < 10; i++)
-        {
-            addManyDoublesUsingStringBuilder();
+            addManyDoublesUsingStringBuilder(); // 37 милисекунд
         }
 
         // ВСЕГДА используйте StringBuilder для работы с большим количеством строк
@@ -47,13 +48,27 @@ public class StringTester {
         StringBuffer buffer = new StringBuffer();
 
 
+    } // окончание main
+
+    public static void addManyDoublesUsingStringBuilder()
+    {
+        long before = System.currentTimeMillis(); // возвращает количество милисекунд с 1 января 1970
+        StringBuilder r = new StringBuilder();
+        Random random = new Random();
+        for(int i = 0; i < 100_000; i++)
+        {
+            r.append(random.nextDouble());
+        }
+        long after = System.currentTimeMillis();
+        System.out.println("addManyDoublesUsingStringBuilder: " + (after - before));
     }
 
-    public static void addManyDoublesUsingString() {
+    public static void addManyDoublesUsingString()
+    {
         long before = System.currentTimeMillis(); // возвращает количество милисекунд с 1 января 1970
         String r = "";
         Random random = new Random();
-        for(int i = 0; i < 10_000; i++)
+        for(int i = 0; i < 100_000; i++)
         {
             r += random.nextDouble();
         }
@@ -61,16 +76,4 @@ public class StringTester {
         System.out.println("addManyDoublesUsingString: " + (after - before));
     }
 
-    public static void addManyDoublesUsingStringBuilder()
-    {
-        long before = System.currentTimeMillis(); // возвращает количество милисекунд с 1 января 1970
-        StringBuilder r = new StringBuilder();
-        Random random = new Random();
-        for(int i = 0; i < 100_00; i++)
-        {
-            r.append(random.nextDouble());
-        }
-        long after = System.currentTimeMillis();
-        System.out.println("addManyDoublesUsingStringBuilder: " + (after - before));
-    }
 }

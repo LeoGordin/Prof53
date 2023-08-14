@@ -12,6 +12,6 @@ public class MessageService {
         new Thread(producer).start();
         new Thread(consumer).start();
 
-        System.out.println("Producer and Consumer are running");
+        System.out.println("Продюсер и Консьюмер запустились");
     }
 }

@@ -1,5 +1,5 @@
 package lesson17;
 
 public interface StringProcessor {
-    String function (String s);
+    String function(String s);
 }

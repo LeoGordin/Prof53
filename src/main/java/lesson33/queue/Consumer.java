@@ -2,7 +2,7 @@ package lesson33.queue;
 
 import java.util.concurrent.BlockingQueue;
 
-public class Consumer implements Runnable{
+public class Consumer implements Runnable {
 
     private final BlockingQueue<Message> queue;
     public Consumer(BlockingQueue<Message> queue) {

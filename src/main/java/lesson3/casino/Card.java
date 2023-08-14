@@ -1,8 +1,8 @@
 package lesson3.casino;
 
 public class Card {
-    private final Rank rank;
-    private final Suite suite;
+    private Rank rank;
+    private Suite suite;
 
     public Card(Rank rank, Suite suite) {
         this.rank = rank;
@@ -13,8 +13,9 @@ public class Card {
     {
         return rank.getValue();
     }
+
     @Override
     public String toString() {
-        return "Card{rank=" + rank + ", suite="+suite+"}";
+        return "Card{rank=" + rank + ", suite=" + suite + "}";
     }
 }

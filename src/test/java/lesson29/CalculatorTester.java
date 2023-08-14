@@ -1,44 +1,63 @@
 package lesson29;
 
+import lesson2.crossword.C;
 import org.junit.*;
 import org.junit.rules.ExpectedException;
 
-import static junit.framework.TestCase.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class CalculatorTester {
+
     @Test
-    public void testMultiplication () {
+    public void testMultiplication() {
+        System.out.println("testMultiplication");
         Calculator calculator = new Calculator();
-        assertEquals("testing multiplication of 2 and 3", 6.0,
+        assertEquals(
+                "Testing multiply of 2 and 3 equals 6",
+                6.0,
                 calculator.multiply(2.0, 3.0),
                 0.001
         );
     }
+
     @Test
-    public void testDivision () {
+    public void testDivision()
+    {
+        System.out.println("testDivision");
         Calculator calculator = new Calculator();
-        assertEquals("Testing division of 10 and 5", 2.0,
-                calculator.divide(10,5), 0.001);
+        assertEquals(
+                "Testing division of 10 and 2 equals 5",
+                5.0,
+                calculator.divide(10.0, 2.0),
+                0.001
+        );
     }
-    @Before //выполняется пперед каждым тестом в классе
-    public void init() {
+
+    @Before // выполняется перед каждым тестов в классе
+    public void init()
+    {
+
         System.out.println("init");
     }
 
     @After // выполняется после каждого теста
-    public void tearDown() {
+    public void tearDown()
+    {
         System.out.println("tearDown");
     }
 
+    @BeforeClass // выполняется однократно в самом начале
+    public static void beforeAll()
+    {
+        System.out.println("beforeAll");
+    }
+
     @AfterClass // выполняется однократно в самом конце
-    public static void afterAll() {
+    public static void afterAll()
+    {
         System.out.println("afterAll");
     }
 
-    @BeforeClass // выполняется однократно в самом начале
-    public static void beforeAll() {
-        System.out.println("beforeAll");
-    }
     // протестим что деление на 0 вызывает нужное исключение
     // с правильным сообщением
 

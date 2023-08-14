@@ -1,56 +1,63 @@
 package lesson32.sync.balance;
 
+import lesson2.crossword.B;
+
+import java.util.Objects;
+
 public class BalanceExample {
-    public static void main(String[] args) {
-        BankAccount b1 = new BankAccount(0);
+    public static void main(String[] args) throws InterruptedException {
+        // создайте счет с нулевым балансом
+        BankAccount account = new BankAccount();
+        account.setBalance(0);
 
-        BankAccountThread bt1 = new BankAccountThread();
-        BankAccountThread bt2 = new BankAccountThread();
+        // создайте два потока
+        // и передайте в них счет
+        BankAccountThread t1 = new BankAccountThread();
+        BankAccountThread t2 = new BankAccountThread();
+        t1.setBankAccount(account);
+        t2.setBankAccount(account);
 
-        bt1.setBankAccount(b1);
-        bt2.setBankAccount(b1);
+        // запустите оба потока
+        t1.start();
+        t2.start();
 
-        bt1.start();
-        bt2.start();
+        // подождите в основном потоке 1 с
+        // Thread.sleep(1_000);
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            System.err.println(e);
-        }
+        t1.join(); // ожидаем окончания потока
+        t2.join(); // ожидаем окончания потока
 
-        System.out.println(b1.getBalance());
-
+        // выведите баланс счета на экран
+        System.out.println(account.getBalance());
+    }
 }
-static class BankAccount {
+class BankAccount {
     private int balance;
-    public synchronized void increaseBalance() {
-        balance = balance + 1000;
+    // public synchronized ... означает синхронизацию на классе
+
+    private Object lock = new Object();
+    public void increaseBalance() {
+        synchronized (lock) { // синхронизируется на экземпляре объекта
+            balance = balance + 1000;
+        }
     }
     public int getBalance() { return balance; }
     public void setBalance(int balance) { this.balance = balance; }
-
-    public BankAccount(int balance) {
-        this.balance = balance;
-    }
 }
- static class BankAccountThread  extends Thread {
-     BankAccount bankAccount;
+class BankAccountThread extends Thread {
+    BankAccount bankAccount;
+    public void setBankAccount(BankAccount account) { this.bankAccount = account; }
 
-     public void setBankAccount(BankAccount bankAccount) {
-         this.bankAccount = bankAccount;
-     }
-
-     @Override
-     public void run() {
-         for (int i = 0; i < 10; i++) {
-             bankAccount.increaseBalance();
-             try {
-                 Thread.sleep(10);
-             } catch (InterruptedException e) {
-                 throw new RuntimeException(e);
-             }
-         }
-     }
- }
+    @Override
+    public void run() {
+        for (int i = 0; i < 10; i++)
+        {
+            bankAccount.increaseBalance();
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
 }

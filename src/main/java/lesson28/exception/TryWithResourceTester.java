@@ -15,10 +15,10 @@ public class TryWithResourceTester {
                 // имплементит AutoClosable и это что-то
                 // будет автоматически закрыто при выходе из try-catch
                 // они закрываются в порядке обратном объявлению
-                FileInputStream fis = new FileInputStream("digits.txt");
-                Reader reader = new InputStreamReader(fis);
-                BufferedReader br = new BufferedReader(reader);
-        ) {
+                        FileInputStream fis = new FileInputStream("digits.txt");
+                        Reader reader = new InputStreamReader(fis);
+                        BufferedReader br = new BufferedReader(reader);
+                ) {
 //            fis = new FileInputStream("digits.txt");
 //            reader = new InputStreamReader(fis);
 //            br = new BufferedReader(reader);

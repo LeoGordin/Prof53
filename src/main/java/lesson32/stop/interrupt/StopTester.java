@@ -11,4 +11,3 @@ public class StopTester {
         stoppableThread.setHasToStop(true);
     }
 }
-

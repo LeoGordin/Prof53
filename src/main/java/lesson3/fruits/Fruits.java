@@ -1,11 +1,9 @@
 package lesson3.fruits;
 
+
+
 public enum Fruits {
-    APPLE(52),
-    ORANGE(47),
-    BANANA(89),
-    GRAPES(67),
-    KIWI(61);
+    APPLE(52), ORANGE(47), BANANA(89), GRAPES(67), KIWI(61);
 
     private int calories;
 

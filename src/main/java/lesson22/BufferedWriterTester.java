@@ -16,7 +16,8 @@ public class BufferedWriterTester {
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
 
             String line = scanner.nextLine();
-            while (!line.equals("stop")) {
+            while (!line.equals("stop"))
+            {
                 bufferedWriter.write(line);
                 bufferedWriter.newLine();
                 bufferedWriter.flush();
@@ -27,7 +28,9 @@ public class BufferedWriterTester {
 //            bufferedWriter.newLine();
 //            bufferedWriter.write("it's a good day");
 //            bufferedWriter.flush(); // вызывает сброс буферов в поток
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.err.println(e.getMessage());
         }
     }

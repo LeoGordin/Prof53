@@ -26,7 +26,14 @@ public class Staff extends Person {
         this.faculty = faculty;
     }
 
+    @Override
     public void introduce() {
-        System.out.println("Staff " + getName() + " salary " + getSalary());
+        System.out.println("Staff " + getName() + " salary " + salary);
     }
+
+//    @Override
+//    public void introduce(String name)
+//    {
+//
+//    }
 }

@@ -6,7 +6,11 @@ public class FigureTester {
         figures[0] = new Circle(15);
         figures[1] = new Rectangle(1,2);
         figures[2] = new Triangle(2,2,1);
+
+        System.out.println("perimeter: " + perimeter(figures));
+        System.out.println("area: " + area(figures));
     }
+
     public static double perimeter(Figure [] figures)
     {
         double result = 0;
@@ -17,6 +21,7 @@ public class FigureTester {
         }
         return result;
     }
+
     public static double area(Figure [] figures)
     {
         double result = 0;
@@ -27,4 +32,5 @@ public class FigureTester {
         }
         return result;
     }
+
 }

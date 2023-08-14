@@ -2,9 +2,9 @@ package lesson23;
 
 import java.io.Serializable;
 
-public class Dog implements Serializable {
-    public String name;
-    public int age;
+public class Dog  implements Serializable  {
+    private String name;
+    private int age;
 
     public Dog(String name, int age) {
         this.name = name;
@@ -17,13 +17,5 @@ public class Dog implements Serializable {
 
     public int getAge() {
         return age;
-    }
-
-    @Override
-    public String toString() {
-        return "Dog{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
     }
 }

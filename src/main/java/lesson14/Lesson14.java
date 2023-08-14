@@ -4,13 +4,14 @@ import java.util.*;
 
 public class Lesson14 {
     public static void main(String[] args) {
-
         List<String> fruits = new ArrayList<>(
-                Arrays.asList("Kiwi", "Apple", "Pear", "Banana", "Strawberry", "Apricot", "Peach")
+                Arrays.asList(
+                        "Kiwi", "Apple", "Pear", "Banana", "Strawberry", "Apricot", "Peach"
+                )
         );
-        fruits.sort(Comparator.comparing(s -> s.substring(2, 3)));
-        System.out.println(fruits);
-
+        // напишите компаратор который отсортирует этот список по 3 букве названия
+        // убедитесь что это работает
+        // "abc".substring(..)
         Comparator<String> thirdLetterComparator = new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
@@ -18,8 +19,11 @@ public class Lesson14 {
             }
         };
 
-        System.out.println(Collections.max(fruits));
-        System.out.println(Collections.max(fruits, thirdLetterComparator));
+        fruits.sort(thirdLetterComparator);
+        System.out.println(fruits);
+
+        System.out.println(Collections.max(fruits)); // Strawberry
+        System.out.println(Collections.max(fruits, thirdLetterComparator)); // Kiwi
 
         List<Fruit> f = new ArrayList<>(
                 Arrays.asList(
@@ -39,17 +43,19 @@ public class Lesson14 {
         fruitSet.addAll(f);
         System.out.println(fruitSet);
 
-        System.out.println(fruitSet.subSet(
-                new Fruit("Fake", 51),
-                new Fruit("Fake", 65)
-        ));
+        System.out.println(
+                fruitSet.subSet(
+                        new Fruit("Fake", 51),
+                        new Fruit("Fake", 65)
+                )
+        );
 
         System.out.println(fruits);
         System.out.println(
-        Collections.binarySearch(fruits, "Lemon", thirdLetterComparator)
+                Collections.binarySearch(fruits, "Lemon", thirdLetterComparator)
         );
 
 
-    }
 
+    }
 }

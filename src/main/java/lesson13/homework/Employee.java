@@ -1,8 +1,8 @@
 package lesson13.homework;
 
-import java.util.Collections;
+import lesson2.crossword.C;
+
 import java.util.Comparator;
-import java.util.List;
 
 public class Employee implements Comparable<Employee> {
     private int id;
@@ -51,11 +51,11 @@ public class Employee implements Comparable<Employee> {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", salary=" + salary +
+        return "E{" +
+                "i=" + id +
+                ", n='" + name + '\'' +
+                ", a=" + age +
+                ", s=" + salary +
                 '}';
     }
 
@@ -71,24 +71,10 @@ public class Employee implements Comparable<Employee> {
         }
     };
 
-    public static Comparator<Employee> salaryComparator = new Comparator<Employee>() {
-        @Override
-        public int compare(Employee o1, Employee o2) {
-            return Double.compare(o1.getSalary(), o2.getSalary());
-        }
-    };
+    public static Comparator<Employee> salaryComparator = (o1, o2) -> Double.compare(o1.getSalary(), o2.getSalary());
 
     public static Comparator<Employee> nameComparator = Comparator.comparing(Employee::getName);
 
 
-    public static void compositeSort(List<Employee> e, List<Comparator<Employee>> c) {
-        if(c != null && c.size() > 0) {
-            Comparator<Employee> complexComparator = c.get(0);
-            for (int i = 1; i< c.size(); i++) {
-                complexComparator = complexComparator.thenComparing(c.get(i));
-            }
-            Collections.sort(e, complexComparator);
-        }
-    }
-}
 
+}

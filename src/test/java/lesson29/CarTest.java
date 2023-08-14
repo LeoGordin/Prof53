@@ -10,7 +10,8 @@ import static org.hamcrest.Matchers.*;
 
 public class CarTest {
     @Test
-    public void propertyTest() {
+    public void propertyTest()
+    {
         Car car = new Car("407", "Peugeot", 14_000);
         assertThat(car, instanceOf(Car.class));
         assertThat(car, hasProperty("price"));
@@ -18,11 +19,21 @@ public class CarTest {
     }
 
     @Test
-    public void testCars() {
+    public void testCars()
+    {
         List<Car> cars = Arrays.asList(
                 new Car("407", "Peugeot", 14_000),
-                new Car("Celica", "Toyota", 24_000));
+                new Car("Celica", "Toyota", 24_000)
+        );
+
+
+        // проверка что в списке 2 элемента
         assertThat(cars, hasSize(2));
-        assertThat(cars, everyItem(hasProperty("price", greaterThan(10_000.0))));
+
+        // проверьте что все машины в списке стоят больше 10_000
+        assertThat(cars, everyItem(
+                hasProperty("price", greaterThan(10_000.0))
+        ));
+
     }
 }

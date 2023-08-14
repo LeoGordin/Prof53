@@ -1,5 +1,7 @@
 package lesson32.pi;
 
+
+
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -43,7 +45,7 @@ public class PiCalculator {
         long before = System.currentTimeMillis();
         // создание пула потоков
         ExecutorService service = Executors.newFixedThreadPool(numberOfThreads);
-        IntStream.range(0, 1_000_000)
+        IntStream.range(0, 10_000_000)
                 .forEach(i -> service.submit(new PiRunnable()));
         service.shutdown();
         try {

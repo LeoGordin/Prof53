@@ -8,8 +8,9 @@ import java.time.temporal.ChronoField;
 
 public class LocalDateTester {
     public static void main(String[] args) {
+        LocalDate now = LocalDate.now(); // дата сейчас
 
-        LocalDate now = LocalDate.now(); //дата сейчас
+        int year = now.getYear();
 
         LocalDate nov10 = LocalDate.of(2005, Month.NOVEMBER, 10);
 
@@ -21,14 +22,13 @@ public class LocalDateTester {
                 .withMonth(4)
                 .with(ChronoField.HOUR_OF_DAY, 7);
 
-        LocalDateTime time  = LocalDateTime.now();
+        LocalDateTime time = LocalDateTime.now();
 
         System.out.println(
                 time.format(
                         DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
                 )
         );
-
 
     }
 }

@@ -7,7 +7,7 @@ public enum Cru {
     ;
 
     // добавить поле качество
-    private final int quality;
+    private int quality;
 
     // добавить конструктор
     Cru(int quality) {

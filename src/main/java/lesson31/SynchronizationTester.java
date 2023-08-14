@@ -1,3 +1,5 @@
+package lesson31;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class SynchronizationTester {
@@ -9,7 +11,6 @@ public class SynchronizationTester {
     private static final Object lock = new Object();
 
     // увеличивает на 1 значение в массиве
-// увеличивает на 1 значение в массиве
     private static /*synchronized*/ void add() // для синхронизации использется SynchronizationTester.class
     {
         // доступ к этому блоку кода
@@ -27,7 +28,6 @@ public class SynchronizationTester {
         ai.incrementAndGet();
     }
 
-
     private static int get()
     {
         // return data[0];
@@ -37,7 +37,6 @@ public class SynchronizationTester {
     // атомарная переменная - все ее изменения
     // синхронизированы
     private static AtomicInteger ai = new AtomicInteger();
-
 
     public static void main(String[] args) throws InterruptedException {
         Runnable r = new MyRunnable();

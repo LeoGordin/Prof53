@@ -1,6 +1,5 @@
 package lesson29;
 
-import lesson29.Probe;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -15,11 +14,14 @@ public class ProbeTester {
                 Probe.isOnlyPositive(new int[]{1,2,3,4})
         );
 
+
+
         assertFalse(
                 "for elements {1,2,3,0} - false",
                 Probe.isOnlyPositive(new int[]{1,2,3,0})
         );
     }
+
 
     // напишите тест для максимума
     @Test
@@ -37,4 +39,5 @@ public class ProbeTester {
                 Probe.maxOfArray(new int[]{})
         );
     }
+
 }

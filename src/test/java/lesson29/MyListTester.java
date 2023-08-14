@@ -11,7 +11,8 @@ import static org.mockito.Mockito.inOrder;
 public class MyListTester {
 
     static class ListProcessor {
-        static void process(List<String> list) {
+        static void  process(List<String> list)
+        {
             list.size();
             list.add("hello");
             list.clear();

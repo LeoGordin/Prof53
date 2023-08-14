@@ -10,12 +10,15 @@ public class BufferedReaderTester {
             Reader reader = new FileReader("testfile.txt");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line = bufferedReader.readLine();
-            while (line != null) {
+            while (line != null)
+            {
                 System.out.println(line);
                 line = bufferedReader.readLine();
             }
-        } catch (Exception e) {
-            System.err.println(e);
+        }
+        catch (Exception e)
+        {
+            System.err.println(e.getMessage());
         }
     }
 }

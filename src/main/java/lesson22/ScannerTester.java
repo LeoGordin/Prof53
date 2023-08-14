@@ -1,26 +1,30 @@
 package lesson22;
+
 import java.util.Scanner;
 
 public class ScannerTester {
     public static void main(String[] args) {
-        System.out.println("Enter whole number and press Enter");
+
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        System.out.println("Enter whole number and press Enter");
+
+        System.out.println("введите целое число и нажмите 'ввод'");
+        int n = scanner.nextInt(); // считаем целое с консоли
+        System.out.println("введите целое число и нажмите 'ввод'");
         int k = scanner.nextInt();
-        System.out.printf("Sum of two numbers is %d \n", n + k);
+        System.out.println("результат сложения: " + (n+k));
 
-
-        System.out.println("Enter number with floating point and press Enter");
-
-        if (scanner.hasNextDouble()) {
+        System.out.println("введите число с плавающей точкой и нажмите 'ввод'");
+        if(scanner.hasNextDouble())
+        {
             double salary = scanner.nextDouble();
-            System.out.println("Salary: " + salary);
+            System.out.println("число " + salary);
         }
 
-        System.out.println("Enter your name and press Enter");
-        scanner.nextLine();
+        System.out.println("введите имя и нажмите 'ввод'");
+        scanner.nextLine(); // считываем перевод строки после числа
         String name = scanner.nextLine();
-        System.out.println("Your name is " + name);
+        System.out.println("Вы ввели имя " + name);
+
+
     }
 }

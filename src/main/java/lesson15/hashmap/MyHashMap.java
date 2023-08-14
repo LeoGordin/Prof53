@@ -1,6 +1,24 @@
 package lesson15.hashmap;
 
 public class MyHashMap implements MyMap {
+
+    private static class Pair { // пара из ключа и значения
+        String key;
+        String value;
+        Pair next; // ссылка на следующую пару
+
+        public Pair(String key, String value, Pair next) {
+            this.key = key;
+            this.value = value;
+            this.next = next;
+        }
+
+        @Override
+        public String toString() {
+            return "{" + key + ":" + value + "}";
+        }
+    }
+
     // начальный размер массива
     private static final int INITIAL_CAPACITY = 4;
 
@@ -12,10 +30,39 @@ public class MyHashMap implements MyMap {
 
     // коэффициент загруженности
     private static final double LOAD_FACTOR = 0.75;
+    // если size > LOAD_FACTOR * source.length
+    // то Map нужно перебалансировать
+    // O(1) поиск в HashMap
+    // балансировка - создание массива в 2 раза
+    // большей длины и копирование туда пар из старого
+
+
+
     @Override
     public int size() {
         return size;
     }
+
+    // нахождение нужного ведра по ключу
+    private int findBucket(String key)
+    {
+        return Math.abs(key.hashCode()) % source.length;
+    }
+
+    // нахождение пары по ключу
+    private Pair findPair(String key)
+    {
+        int bucket = findBucket(key);
+        Pair current = source[bucket];
+        while (current != null )
+        {
+            if(current.key.equals(key))
+                return current;
+            current = current.next;
+        }
+        return null;
+    }
+
 
     // есть ли в Map пара с таким ключом
     @Override
@@ -51,7 +98,9 @@ public class MyHashMap implements MyMap {
         }
     }
 
-    private void resize() {
+    // перебалансировка массива
+    private void resize()
+    {
         // создание нового массива в 2 раза
         // большей длины и копирование туда всех элементов
         Pair [] newSource = new Pair[source.length * 2];
@@ -63,7 +112,7 @@ public class MyHashMap implements MyMap {
                 Pair next = current.next;
                 // ведро в новом массиве
                 int newBucket =
-                        current.key.hashCode() %
+                        Math.abs(current.key.hashCode()) %
                                 newSource.length;
                 current.next = newSource[newBucket];
                 newSource[newBucket] = current;
@@ -86,41 +135,27 @@ public class MyHashMap implements MyMap {
     public String remove(String key) {
         int bucket = findBucket(key);
         Pair current = source[bucket];
-        Pair previous = null;
-        while (current != null) {
-            if (current.key.equals(key)) {
-                String value = current.value;
-                if (previous == null) {
-                    source[bucket] = current.next;
-                } else {
-                    previous.next = current.next;
-                }
-                size--;
-                return value;
-            }
-            previous = current;
-            current = current.next;
+        if(current == null) // в бакете нет элемента
+            return null;
+        if(current.key.equals(key)) { // нужный элемент находится непосредственное в бакете
+            source[bucket] = current.next;
+            size--;
+            return current.value;
         }
-        return null;
-
-    }
-    private int findBucket(String key)
-    {
-        return Math.abs(key.hashCode()) % source.length;
-    }
-    // нахождение пары по ключу
-    private Pair findPair(String key)
-    {
-        int bucket = findBucket(key);
-        Pair current = source[bucket];
-        while (current != null )
+        while (current.next != null) // нужный элемент находится внутри цепочки
         {
-            if(current.key.equals(key))
-                return current;
-            current = current.next;
+            if(current.next.key.equals(key))
+            {
+                Pair toDelete = current.next;
+                current.next = toDelete.next;
+                size--;
+                return toDelete.value;
+            }
         }
-        return null;
+        return null; // если элемент с таким ключом отсутствует
     }
+
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder("[");
@@ -139,27 +174,4 @@ public class MyHashMap implements MyMap {
         builder.append("]");
         return builder.toString();
     }
-
-    private static class Pair { // пара из ключа и значения
-        String key;
-        String value;
-        Pair next; // ссылка на следующую пару
-
-        public Pair(String key, String value, Pair next) {
-            this.key = key;
-            this.value = value;
-            this.next = next;
-        }
-
-        @Override
-        public String toString() {
-            return "Pair{" +
-                    "key='" + key + '\'' +
-                    ", value='" + value + '\'' +
-                    ", next=" + next +
-                    '}';
-        }
-    }
-
-
 }

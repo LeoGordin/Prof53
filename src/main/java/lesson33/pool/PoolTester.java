@@ -13,6 +13,8 @@ public class PoolTester {
         if(result.isDone())
             System.out.println(result.get());
 
+        // get() блокирует поток в котором выполняется на время ожидания результата
+
         System.out.println(result.get(10, TimeUnit.SECONDS));
 
         service.shutdown(); // пул будет ждать окончания обработки всех заданий

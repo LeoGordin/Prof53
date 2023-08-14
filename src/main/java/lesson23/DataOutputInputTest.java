@@ -7,10 +7,9 @@ import java.io.FileOutputStream;
 
 public class DataOutputInputTest {
     public static void main(String[] args) {
-//        write();
+        // write();
         read();
     }
-
     // будет что-то записывать в файл
     public static void write()
     {
@@ -32,19 +31,21 @@ public class DataOutputInputTest {
         }
     }
 
-    public static void read() {
-        try (
-                FileInputStream fis = new FileInputStream("data.bin");
-                DataInputStream dis = new DataInputStream(fis)
-                ){
-            System.out.println(dis.readDouble());
-            System.out.println(dis.readBoolean());
-            System.out.println(dis.readInt());
-            System.out.println(dis.readUTF());
-
-        } catch (Exception e) {
+    // что-то считывать из файла
+    public static void read()
+    {
+        // считаем сохраненные ранее данные из data.bin
+        try (FileInputStream fis = new FileInputStream("data.bin");
+                DataInputStream dis = new DataInputStream(fis);) {
+            double pi = dis.readDouble();
+            boolean t = dis.readBoolean();
+            int i = dis.readInt();
+            String hello = dis.readUTF();
+            System.out.println(pi + " " + t + " " + i + " " + hello);
+        }
+        catch (Exception e)
+        {
             System.err.println(e.getMessage());
         }
-
     }
 }

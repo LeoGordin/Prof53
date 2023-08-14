@@ -6,8 +6,6 @@ public class TestABC {
         c.hello();
 
         B b = new B();
-        b.hello();
-
-        //c.world(); -
+        b.world();
     }
 }

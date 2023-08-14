@@ -25,10 +25,10 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
+        return "s{" +
+                "f='" + firstName + '\'' +
+                ", l='" + lastName + '\'' +
+                ", a=" + age +
                 '}';
     }
 }

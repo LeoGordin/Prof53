@@ -1,23 +1,23 @@
 package lesson2.shape;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
 
-    private final int x;
-    private final int y;
+    // стороны
+    private int x;
+    private int y;
 
     public Rectangle(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-
     @Override
     double area() {
-        return x * y;
+        return x*y;
     }
 
     @Override
     double perimeter() {
-        return 2*x + 2*y;
+        return 2*(x + y);
     }
 }

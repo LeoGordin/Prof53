@@ -14,7 +14,7 @@ public class PlayerTester {
                 )
         );
         System.out.println(team);
-        Collections.sort(team);
+        Collections.sort(team); // сортировка через Comparable<Player>
         System.out.println(team);
 
         Comparator<Player> reverseAge = new PlayerReverseAgeComparator();
@@ -31,16 +31,23 @@ public class PlayerTester {
         Collections.sort(team, namesComparator);
         System.out.println(team);
 
-        // Interface consisting one method is called "functional interface" and can be replaced with lambda expression
+        // интерфейс состоящий из одного метода называется в яве "функциональным интерфейсом"
+        // реализацию функциального интерфейса можно заменить лямбда-выражением
 
-        Comparator<Player> reverseNameComparator = (o1, o2) -> o2.getName().compareTo(o1.getName());
+        Comparator<Player> reverseNamesComparator = (o1, o2) -> o2.getName().compareTo(o1.getName());
 
         Collections.sort(
                 team,
-                namesComparator.thenComparing(reverseAge.reversed()));
+                namesComparator // объединение компараторов в цепочки
+                        .thenComparing(reverseAge.reversed()) // обращение компаратора на противоположный
+        );
+
+        Comparator<Player> composite = namesComparator.thenComparing(reverseAge.reversed());
+
         System.out.println(team);
+
+        Collections.sort(team, Player.ageComparator);
 
 
     }
-
 }

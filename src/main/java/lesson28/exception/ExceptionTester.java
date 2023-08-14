@@ -1,6 +1,6 @@
 package lesson28.exception;
 
-import static lesson28.exception.Tester.solution;
+import java.io.IOException;
 
 public class ExceptionTester {
     // Exception Исключение это специальная ситуация или ошибка при работе программы
@@ -13,28 +13,39 @@ public class ExceptionTester {
 
     public static void main(String[] args) {
         try {
-            System.out.println(divide(10, 5));
-            System.out.println(divide(3, 2));
-            System.out.println(divide(311, 0));
-        } catch (DivisionByZeroException e) {
-            System.out.println(e.getMessage());
-        } finally {
+            System.out.println(divide(14, 2));
+            System.out.println(divide(10, 0));
+            System.out.println(divide(3, 8));
+        }
+        catch (Exception e)
+        {
+            System.out.println("got and exception: " + e.getMessage());
+        }
+//        catch (DivisionByZeroException | IOException e)
+//        {
+//            System.out.println("got and exception: " + e.getMessage());
+//        }
+//        catch (IOException e)
+//        {
+//            System.out.println("got an io exception: " + e.getMessage());
+//        }
+        finally {
+            // способ очищения ресурсов
+            // закрытия чего-нибудь
             System.out.println("finally");
         }
-
-        System.out.println("THE END");
-
-        try {
-             //solution(0);
-            solution(0);
-        } catch (RuntimeException runtimeException) {
-            System.out.println(runtimeException.getClass());
-        }
+        System.out.println("Program ends");
     }
 
-    public static int divide(int a, int b) throws DivisionByZeroException {
-        if (b == 0)
-            throw new DivisionByZeroException("Не смей делить на ноль, смерд!");
+
+
+    public static int divide(int a, int b) throws DivisionByZeroException, IOException {
+        if(b == 0) {
+            throw new DivisionByZeroException("делить на нуль нельзя!");
+        }
         return a/b;
     }
+
+
+
 }

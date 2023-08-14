@@ -1,6 +1,5 @@
 package lesson14;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Professor {
@@ -28,8 +27,6 @@ public class Professor {
 
     @Override
     public String toString() {
-        return "Professor{" +
-                "name='" + name + '\'' +
-                '}';
+        return "P: " + name;
     }
 }

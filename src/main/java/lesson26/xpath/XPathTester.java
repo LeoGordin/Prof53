@@ -28,9 +28,7 @@ public class XPathTester {
             //PLANT[@plantid='456']/PRICE
          */
         XPathExpression expression = xpath.compile("//PLANT[@plantid='456']/PRICE");
-
         NodeList price = (NodeList) expression.evaluate(doc, XPathConstants.NODESET);
-
         for(int i = 0; i < price.getLength(); i++)
         {
             System.out.println(

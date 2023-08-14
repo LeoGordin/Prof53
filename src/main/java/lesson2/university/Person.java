@@ -26,6 +26,7 @@ public class Person {
     }
 
     public void introduce() {
-        System.out.println("I'm a person ");
+        System.out.print("I'm a person ");
     }
+
 }

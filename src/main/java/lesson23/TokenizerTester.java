@@ -17,10 +17,11 @@ public class TokenizerTester {
         Employee employee = new Employee(123, "Max Kotkov", 27, 32_500.7);
         try(
                 PrintWriter printWriter = new PrintWriter("employee.txt");
-        )
+                )
         {
             printWriter.println(
-                    employee.getId() + "|" + employee.getName() + "|" + employee.getAge() + "|" + employee.getSalary()
+                    employee.getId() + "|" + employee.getName() + "|" + employee.getAge() +
+                            "|" + employee.getSalary()
             );
         }
         catch (Exception e)
@@ -32,7 +33,7 @@ public class TokenizerTester {
     {
         try(
                 FileReader fileReader = new FileReader("employee.txt");
-                BufferedReader bufferedReader = new BufferedReader(fileReader)
+                BufferedReader bufferedReader = new BufferedReader(fileReader);
                 )
         {
             String s = bufferedReader.readLine();

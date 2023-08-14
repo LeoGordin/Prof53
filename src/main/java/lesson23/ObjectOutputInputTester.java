@@ -7,38 +7,40 @@ import java.io.ObjectOutputStream;
 
 public class ObjectOutputInputTester {
     public static void main(String[] args) {
-    //    write();
+        write();
         read();
     }
     public static void read()
     {
-        try (
+        try(
                 FileInputStream fis = new FileInputStream("dog.bin");
                 ObjectInputStream ois = new ObjectInputStream(fis);
-                ){
+                )
+        {
             Object o = ois.readObject();
-            if(o instanceof Dog) {
-
+            if(o instanceof Dog)
+            {
                 Dog d = (Dog) o;
-            System.out.println(d.name);
+                System.out.println(d.getName());
+            }
         }
-
-
-    } catch (Exception e) {
+        catch (Exception e)
+        {
             System.err.println(e.getMessage());
         }
-
     }
     public static void write()
     {
         Dog dog = new Dog("Sharik", 3);
-        try (FileOutputStream fos = new FileOutputStream("dog.bin");
-             ObjectOutputStream oos = new ObjectOutputStream(fos);
-                ){
-
+        try (
+                FileOutputStream fos = new FileOutputStream("dog.bin");
+                ObjectOutputStream oos = new ObjectOutputStream(fos);
+                )
+        {
             oos.writeObject(dog);
-
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             System.err.println(e.getMessage());
         }
     }

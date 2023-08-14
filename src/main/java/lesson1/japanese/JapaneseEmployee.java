@@ -3,23 +3,29 @@ package lesson1.japanese;
 public class JapaneseEmployee {
 
     public static void main(String[] args) {
-        JapaneseEmployee mitsuo = new JapaneseEmployee("Mitsuo", "Baso", 120_000, 4);
-        JapaneseEmployee akira = new JapaneseEmployee("Akira", "Kurosawa", 100_000, 12);
+        JapaneseEmployee misuo = new JapaneseEmployee("Mitsuo", "Baso",
+                120_000, 4);
 
-        System.out.println(mitsuo.getFirstName() + " " + mitsuo.calculateSalary());
+        JapaneseEmployee akira = new JapaneseEmployee("Akira", "Kurosava",
+                100_000, 12);
+
+        System.out.println(misuo.getFirstName() + " " + misuo.calculateSalary());
         System.out.println(akira.getFirstName() + " " + akira.calculateSalary());
-
+        misuo.hello();
         akira.hello();
-        mitsuo.hello();
     }
 
-    public String hello() {
-        if (years > 10) {
-            return  "Good afternoon, " + this.firstName + " " + this.lastName;
-        } else {
-            return "Hello " + this.firstName;
-        }
+    public String hello()
+    {
+        String s = "";
+        if(years >= 10)
+            s = "Добрый день " + firstName + " " + lastName;
+        else
+            s = "Привет " + firstName;
+        System.out.println(s);
+        return s;
     }
+
 
     private String firstName;
     private String lastName;
@@ -28,8 +34,9 @@ public class JapaneseEmployee {
 
     public static int delta = 10_000;
 
-    public double calculateSalary() {
-        return baseSalary + years * delta;
+    public int calculateSalary()
+    {
+        return (int) baseSalary + delta * years;
     }
 
     public JapaneseEmployee(String firstName, String lastName, double baseSalary, int years) {
@@ -70,6 +77,4 @@ public class JapaneseEmployee {
     public void setYears(int years) {
         this.years = years;
     }
-
-
 }

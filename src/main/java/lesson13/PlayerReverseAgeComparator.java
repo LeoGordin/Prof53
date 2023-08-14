@@ -5,10 +5,10 @@ import java.util.Comparator;
 public class PlayerReverseAgeComparator implements Comparator<Player> {
     @Override
     public int compare(Player o1, Player o2) {
-        // if o1 > o2 return +
-        // if o1 < o2 return -
-        // if o1 = o2 return 0
+        // если o1 > o2 нужно вернуть что-то положительное
+        // если o1 == o2 нужно вернуть 0
+        // если o1 < o2 нужно вернуть что-то отрицательное
+        // напишите компаратор по убыванию возраста
         return Integer.compare(o2.getAge(), o1.getAge());
     }
-    public static Comparator<Player> ageComparator = (o1, o2) -> Integer.compare(o1.getAge(), o2.getAge());
 }

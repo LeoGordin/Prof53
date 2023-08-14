@@ -2,13 +2,14 @@ package lesson34;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
+import java.util.function.BiFunction;
 
 public class CompletableFutureCombine {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         CompletableFuture<String> combineResult =
-                CompletableFuture.supplyAsync(CompletableFutureCombine::hello)
+                CompletableFuture.supplyAsync(() -> hello())
                         .thenCombine(
-                                CompletableFuture.supplyAsync(CompletableFutureCombine::world),
+                                CompletableFuture.supplyAsync(() -> world()),
                                 (s1, s2) -> s1 + " " + s2
                         );
 
